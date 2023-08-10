@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="https://cdn.laughnow.app/icons/app-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Report something — LaughNow</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/swiped-events/1.1.7/swiped-events.min.js" integrity="sha512-q2rGCiN6EL2X7aJwVzSD6E0GbpfcGSjipdpZ12lqArQfSMb/LTDXlSFZLrohrSanuRk2/oP96lb14NNgPCAZPw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/translater.js/1.0.12/translater.min.js" integrity="sha512-lVd8Ov3O+4Ubc0HN0IKhjbP4nOg7MDoQORI2tpkWSdRr3440zt31uR+lgO9QNDGrBUjq/hcsMjQDVux/02142w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <style>
+    body {
+      color: #000000;
+      background: #F6F6F6;
+      overflow-y: scroll;
+    }
+    
+    .h1 {
+      font-size: 70px;
+    }
+    
+    .cont {
+      margin-top: 80px;
+    }
+    
+    .a-priv {
+      color: #A5A5A5;
+      fill: #A5A5A5;
+      text-decoration: underline 2px #DDDDDD;
+      text-underline-offset: 5px;
+      transition: linear 100ms;
+    }
+    
+    .a-priv:hover {
+      color: #000000;
+      fill: #000000;
+      text-decoration: underline 2px #00000070;
+    }
+    
+    .footer-a-d {
+      color: #A5A5A5;
+      transition: linear 50ms;
+    }
+    
+    .footer-a-d:hover {
+      color: #000000;
+    }
+    
+    .ic {
+      display: block;
+    }
+    
+    .m {
+      background: #FFFFFF50;
+      box-shadow: 0px 10px 20px rgba(0 0 0 / 20%);
+    }
+    
+    .m-item:hover {
+      background: #F0F0F0;
+    }
+    
+    @media screen and (max-width: 550px) {
+      .h1 {
+        font-size: 48px;
+      }
+      
+      .cont {
+        margin-top: -10px;
+      }
+      
+      .ic {
+        display: none;
+      }
+      
+      .footer-hide {
+        display: none;
+      }
+      
+      .lang-t {
+        float: left;
+      }
+    }
+  </style>
+  <body>
+    <center>
+    <div class="cont" style="width: calc(100% - 30px); max-width: 662px;">
+      <a class="a-priv ic" href="https://laughnow.app" style="float: left;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="height: 14px; position: relative; top: 1px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="m161-480 303 303q16 16 16.5 39.5T465-97q-17 17-41 17t-41-17L66-414q-14-14-20.5-31T39-480q0-18 6.5-35T66-546l318-318q17-17 40-16.5t40 16.5q16 17 16.5 40.5T464-783L161-480Z"></path>
+            </svg>
+        Back to LaughNow
+        <!--{ca}Torna a LaughNow-->
+        <!--{da}Tilbage til LaughNow-->
+        <!--{de}Zurück zu LaughNow-->
+        <!--{es}Volver a LaughNow-->
+        <!--{fr}Retour à LaughNow-->
+        <!--{it}Torniamo a LaughNow-->
+        <!--{nl}Terug naar LaughNow-->
+        <!--{nb}Tilbake til LaughNow-->
+        <!--{pt}De volta ao LaughNow-->
+        <!--{sv}Tillbaka till LaughNow-->
+      </a>
+      <div style="clear: both;"></div>
+      <br>
+      <br>
+      <h1 class="h1" style="float: left; text-align: left; margin-top: 0;">
+        Report something
+        <!--{ca}Informar d'alguna cosa-->
+        <!--{da}Rapporter noget-->
+        <!--{de}Etwas melden-->
+        <!--{es}Reportar algo-->
+        <!--{fr}Signaler quelque chose-->
+        <!--{it}Segnala qualcosa-->
+        <!--{nl}Rapporteer iets-->
+        <!--{nb}Rapporter noe-->
+        <!--{pt}Reporte algo-->
+        <!--{sv}Rapportera något-->
+      </h1>
+      <div style="clear: both;"></div>
+      <h3 style="float: left; font-size: 20px;">
+        Get in touch with us
+        <!--{ca}Contacta amb nosaltres-->
+        <!--{da}Kontakt os-->
+        <!--{de}Kontaktiere uns-->
+        <!--{es}Contáctanos-->
+        <!--{fr}Contactez-nous-->
+        <!--{it}Contattaci-->
+        <!--{nl}Neem contact met ons op-->
+        <!--{nb}Kontakt oss-->
+        <!--{pt}Contate-nos-->
+        <!--{sv}Kontakta oss-->
+      </h3>
+      <div style="clear: both;"></div>
+      <p style="float: left; text-align: left; margin-top: -5px; font-size: 17px;">
+       Please send us your report to:
+       <!--{ca}Envieu-nos el vostre informe a: -->
+       <!--{da}Send os venligst din rapport til: -->
+       <!--{de}Bitte senden Sie uns Ihren Bericht an: -->
+       <!--{es}Por favor envíenos su informe a: -->
+       <!--{fr}Veuillez nous envoyer votre rapport à : -->
+       <!--{it}Inviaci la tua segnalazione a: -->
+       <!--{nl}Stuur ons uw melding naar: -->
+       <!--{nb}Vennligst send oss din rapport til: -->
+       <!--{pt}Por favor, envie-nos o seu relatório para: -->
+       <!--{sv}Skicka oss din rapport till: -->
+       <a class="a-priv" href="">humans@laughnow.app</a>
+        <br>
+        <br>
+        An attached screenshot or detailed description of what you would like to report will come handy to streamline the process.
+        <!--{ca}Una captura de pantalla adjunta o una descripció detallada del que voleu informar us serà útil per agilitzar el procés.-->
+        <!--{da}Et vedhæftet skærmbillede eller en detaljeret beskrivelse af, hvad du gerne vil rapportere, vil være praktisk for at strømline processen.-->
+        <!--{de}Ein beigefügter Screenshot oder eine detaillierte Beschreibung dessen, was Sie melden möchten, ist hilfreich, um den Prozess zu optimieren.-->
+        <!--{es}Una captura de pantalla adjunta o una descripción detallada de lo que le gustaría informar será útil para agilizar el proceso.-->
+        <!--{fr}Une capture d'écran ou une description détaillée de ce que vous souhaitez signaler sera utile pour rationaliser le processus.-->
+        <!--{it}Uno screenshot allegato o una descrizione dettagliata di ciò che desideri segnalare ti sarà utile per semplificare il processo.-->
+        <!--{nl}Een bijgevoegd screenshot of een gedetailleerde beschrijving van wat u wilt melden, is handig om het proces te stroomlijnen.-->
+        <!--{nb}Et vedlagt skjermbilde eller detaljert beskrivelse av hva du ønsker å rapportere vil være nyttig for å effektivisere prosessen.-->
+        <!--{pt}Uma captura de tela anexada ou uma descrição detalhada do que você gostaria de relatar será útil para agilizar o processo.-->
+        <!--{sv}En bifogad skärmdump eller detaljerad beskrivning av vad du vill rapportera kommer att vara praktiskt för att effektivisera processen.-->
+      </p>
+      <div style="clear: both;"></div>
+      <br>
+      <br>
+      <br>
+      <div class="footer">
+      <a class="footer-a-d touch-action lang-t" id="lang-g-t" style="font-weight: 600; color: #000000;">
+         EN
+          <!--{ca}CA-->
+          <!--{da}DA-->
+          <!--{de}DE-->
+          <!--{es}ES-->
+          <!--{fr}FR-->
+          <!--{it}IT-->
+          <!--{nl}NL-->
+          <!--{nb}NB-->
+          <!--{pt}PT-->
+          <!--{fi}FI-->
+          <!--{sv}SV-->
+          <!--{mi}MI-->
+          <!--{el}EL-->
+          <!--{zh}ZH-->
+          <!--{ja}JA-->
+          <!--{ko}KO-->
+        </a>
+        &emsp;
+        <a class="footer-a-d footer-hide" href="https://laughnow.app/privacy" style="color: #000000;">
+          Privacy
+          <!--{ca}Privadesa-->
+          <!--{da}Anonymitet-->
+          <!--{de}Datenschutz-->
+          <!--{es}Privacidad-->
+          <!--{fr}Confidentialité-->
+          <!--{it}Privacy-->
+          <!--{nl}Privacy-->
+          <!--{nb}Personvern-->
+          <!--{pt}Privacidade-->
+          <!--{sv}Integritet-->
+        </a>
+        &emsp;
+        <a class="footer-a-d footer-hide" href="https://laughnow.app/terms">
+          Terms
+          <!--{ca}Condicions d'ús-->
+          <!--{da}Betingelser-->
+          <!--{de}Bedingungen-->
+          <!--{es}Términos-->
+          <!--{fr}Conditions-->
+          <!--{it}Condizioni-->
+          <!--{nl}Voorwaarden-->
+          <!--{nb}Betingelser-->
+          <!--{pt}Termos-->
+          <!--{sv}Villkor-->
+        </a>
+        &emsp;
+        <a class="footer-a-d footer-hide" href="https://laughnow.app/help">
+          Help
+          <!--{ca}Ajuda-->
+          <!--{da}Hjælp-->
+          <!--{de}Hilfe-->
+          <!--{es}Ayuda-->
+          <!--{fr}Aider-->
+          <!--{it}Aiuto-->
+          <!--{nl}Hulp-->
+          <!--{nb}Hjelp-->
+          <!--{pt}Ajuda-->
+          <!--{sv}Hjälp-->
+        </a>
+        &emsp;
+        <a class="footer-a-d footer-hide" href="https://cdn.laughnow.app/press-kit.zip">
+          Press kit
+          <!--{ca}Kit de premsa-->
+          <!--{da}Pressemateriale-->
+          <!--{de}Pressemappe-->
+          <!--{es}Kit de prensa-->
+          <!--{fr}Dossier de presse-->
+          <!--{it}Cartella stampa-->
+          <!--{nl}Persbericht-->
+          <!--{nb}Pressepakke-->
+          <!--{pt}Kit de imprensa-->
+          <!--{sv}Presskit-->
+        </a>
+      <div style="clear: both; height: 50px;"></div>
+    </div>
+      </div>
+    </center>
+          <div class="overlay" id="landing-o"></div>
+      <div class="m emerge" id="lang-g" style="left: 10%;">
+            <a href="javascript:tran.setLang('ca');">
+            <div class="m-item" ontouchstart>
+              <p style="color: inherit; text-decoration: none;  text-align: left; float: left; margin-left: 12px; display: inline-block; line-height: 44px; margin-top: 0;">
+            Català
+          </p>
+            </div>
+            </a>
+            <a href="javascript:tran.setLang('da');">
+            <div class="m-item" ontouchstart>
+              <p style="color: inherit; text-decoration: none;  text-align: left; float: left; margin-left: 12px; display: inline-block; line-height: 44px; margin-top: 0;">
+            Dansk
+          </p>
+            </div>
+            </a>
+            <a href="javascript:tran.setLang('de');">
+            <div class="m-item" ontouchstart>
+              <p style="color: inherit; text-decoration: none;  text-align: left; float: left; margin-left: 12px; display: inline-block; line-height: 44px; margin-top: 0;">
+            Deutsch
+          </p>
+            </div>
+            </a>
+            <a href="javascript:tran.setLang('default');">
+            <div class="m-item" ontouchstart>
+              <p style="color: inherit; text-decoration: none;  text-align: left; float: left; margin-left: 12px; display: inline-block; line-height: 44px; margin-top: 0;">
+            English
+          </p>
+            </div>
+            </a>
+            <a href="javascript:tran.setLang('es');">
+            <div class="m-item" ontouchstart>
+              <p style="color: inherit; text-decoration: none;  text-align: left; float: left; margin-left: 12px; display: inline-block; line-height: 44px; margin-top: 0;">
+            Español
+          </p>
+            </div>
+            </a>
+            <a href="javascript:tran.setLang('fr');">
+            <div class="m-item" ontouchstart>
+              <p style="color: inherit; text-decoration: none;  text-align: left; float: left; margin-left: 12px; display: inline-block; line-height: 44px; margin-top: 0;">
+            Français
+          </p>
+            </div>
+            </a>
+            <a href="javascript:tran.setLang('it');">
+            <div class="m-item" ontouchstart>
+              <p style="color: inherit; text-decoration: none;  text-align: left; float: left; margin-left: 12px; display: inline-block; line-height: 44px; margin-top: 0;">
+            Italiano
+          </p>
+            </div>
+            </a>
+            <a href="javascript:tran.setLang('nl');">
+            <div class="m-item" ontouchstart>
+              <p style="color: inherit; text-decoration: none;  text-align: left; float: left; margin-left: 12px; display: inline-block; line-height: 44px; margin-top: 0;">
+            Nederlands
+          </p>
+            </div>
+            </a>
+            <a href="javascript:tran.setLang('nb');">
+            <div class="m-item" ontouchstart>
+              <p style="color: inherit; text-decoration: none;  text-align: left; float: left; margin-left: 12px; display: inline-block; line-height: 44px; margin-top: 0;">
+            Norsk bokmål
+          </p>
+            </div>
+            </a>
+            <a href="javascript:tran.setLang('pt');">
+            <div class="m-item" ontouchstart>
+              <p style="color: inherit; text-decoration: none;  text-align: left; float: left; margin-left: 12px; display: inline-block; line-height: 44px; margin-top: 0;">
+            Português
+          </p>
+            </div>
+            </a>
+            <a href="javascript:tran.setLang('sv');">
+            <div class="m-item" style="border-bottom: none;" ontouchstart>
+              <p style="color: inherit; text-decoration: none;  text-align: left; float: left; margin-left: 12px; display: inline-block; line-height: 44px; margin-top: 0;">
+            Svenska
+          </p>
+            </div>
+            </a>
+          </div>
+    <script>
+      var tran = new Translater();
+    if (tran.getLang() === "default") tran.setLang('en');
+    </script>
+    <script>
+      document.querySelector("#lang-g-t").addEventListener("click", function () {
+  document.querySelector("#lang-g").style.display = "block";
+  document.querySelector("#landing-o").style.display = "block";
+}); 
+
+document.querySelector("#landing-o").addEventListener("click", function () {
+  document.querySelector("#lang-g").style.display = "none";
+  document.querySelector("#landing-o").style.display = "none";
+}); 
+    </script>
+  </body>
+</html>
