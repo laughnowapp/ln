@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="https://cdn.laughnow.app/icons/app-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Privacy — LaughNow</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/swiped-events/1.1.7/swiped-events.min.js" integrity="sha512-q2rGCiN6EL2X7aJwVzSD6E0GbpfcGSjipdpZ12lqArQfSMb/LTDXlSFZLrohrSanuRk2/oP96lb14NNgPCAZPw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/translater.js/1.0.12/translater.min.js" integrity="sha512-lVd8Ov3O+4Ubc0HN0IKhjbP4nOg7MDoQORI2tpkWSdRr3440zt31uR+lgO9QNDGrBUjq/hcsMjQDVux/02142w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <style>
+    body {
+      color: #000000;
+      background: #F6F6F6;
+      overflow-y: scroll;
+    }
+    
+    .h1 {
+      font-size: 70px;
+    }
+    
+    .cont {
+      margin-top: 80px;
+    }
+    
+    .a-priv {
+      color: #A5A5A5;
+      fill: #A5A5A5;
+      text-decoration: underline 2px #DDDDDD;
+      text-underline-offset: 5px;
+      transition: linear 100ms;
+    }
+    
+    .a-priv:hover {
+      color: #000000;
+      fill: #000000;
+      text-decoration: underline 2px #00000070;
+    }
+    
+    .footer-a-d {
+      color: #A5A5A5;
+      transition: linear 50ms;
+    }
+    
+    .footer-a-d:hover {
+      color: #000000;
+    }
+    
+    .ic {
+      display: block;
+    }
+    
+    .m {
+      background: #FFFFFF50;
+      box-shadow: 0px 10px 20px rgba(0 0 0 / 20%);
+    }
+    
+    .m-item:hover {
+      background: #F0F0F0;
+    }
+    
+    @media screen and (max-width: 550px) {
+      .h1 {
+        font-size: 48px;
+      }
+      
+      .cont {
+        margin-top: -10px;
+      }
+      
+      .ic {
+        display: none;
+      }
+      
+      .footer-hide {
+        display: none;
+      }
+      
+      .lang-t {
+        float: left;
+      }
+    }
+  </style>
+  <body>
+    <center>
+    <div class="cont" style="width: calc(100% - 30px); max-width: 662px;">
+      <a class="a-priv ic" href="https://laughnow.app" style="float: left;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="height: 14px; position: relative; top: 1px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="m161-480 303 303q16 16 16.5 39.5T465-97q-17 17-41 17t-41-17L66-414q-14-14-20.5-31T39-480q0-18 6.5-35T66-546l318-318q17-17 40-16.5t40 16.5q16 17 16.5 40.5T464-783L161-480Z"></path>
+            </svg>
+        Back to LaughNow
+        <!--{ca}Torna a LaughNow-->
+        <!--{da}Tilbage til LaughNow-->
+        <!--{de}Zurück zu LaughNow-->
+        <!--{es}Volver a LaughNow-->
+        <!--{fr}Retour à LaughNow-->
+        <!--{it}Torniamo a LaughNow-->
+        <!--{nl}Terug naar LaughNow-->
+        <!--{nb}Tilbake til LaughNow-->
+        <!--{pt}De volta ao LaughNow-->
+        <!--{sv}Tillbaka till LaughNow-->
+      </a>
+      <div style="clear: both;"></div>
+      <br>
+      <br>
+      <h1 class="h1" style="float: left; margin-top: 0;">
+        Privacy
+        <!--{ca}Privadesa-->
+        <!--{da}Anonymitet-->
+        <!--{de}Datenschutz-->
+        <!--{es}Privacidad-->
+        <!--{fr}Confidentialité-->
+        <!--{it}Privacy-->
+        <!--{nl}Privacy-->
+        <!--{nb}Personvern-->
+        <!--{pt}Privacidade-->
+        <!--{sv}Integritet-->
+      </h1>
+      <div style="clear: both;"></div>
+      <p style="float: left; color: #A5A5A5; margin-top: -20px;">
+        Last updated August 3, 2023
+        <!--{ca}Última actualització el 3 d'agost de 2023-->
+        <!--{da}Sidst opdateret 3. august 2023-->
+        <!--{de}Zuletzt aktualisiert am 3. August 2023-->
+        <!--{es}Última actualización 3 de agosto de 2023-->
+        <!--{fr}Dernière mise à jour le 3 août 2023-->
+        <!--{it}Ultimo aggiornamento 3 agosto 2023-->
+        <!--{nl}Laatst bijgewerkt op 3 augustus 2023-->
+        <!--{nb}Sist oppdatert 3. august 2023-->
+        <!--{pt}Última atualização em 3 de agosto de 2023-->
+        <!--{sv}Senast uppdaterad 3 augusti 2023-->
+      </p>
+      <div style="clear: both;"></div>
+      <br>
+      <h3 style="float: left; font-size: 20px;">
+        Introduction
+        <!--{ca}Introducció-->
+        <!--{da}Introduktion-->
+        <!--{de}Einführung-->
+        <!--{es}Introducción-->
+        <!--{fr}Introduction-->
+        <!--{it}Introduzione-->
+        <!--{nl}Invoering-->
+        <!--{nb}Introduksjon-->
+        <!--{pt}Introdução-->
+        <!--{sv}Introduktion-->
+      </h3>
+      <div style="clear: both;"></div>
+      <p style="float: left; text-align: left; margin-top: -5px; font-size: 17px;">
+        LaughNow respects your privacy and is committed to protecting your data. The present policy describes:
+        <!--{ca}LaughNow respecta la teva privadesa i està compromès a protegir les teves dades. La present política descriu:-->
+        <!--{da}LaughNow respekterer dit privatliv og er forpligtet til at beskytte dine data. Den nuværende politik beskriver:-->
+        <!--{de}LaughNow respektiert Ihre Privatsphäre und verpflichtet sich, Ihre Daten zu schützen. Die vorliegende Richtlinie beschreibt:-->
+        <!--{es}LaughNow respeta tu privacidad y se compromete a proteger tus datos. La presente política describe:-->
+        <!--{fr}LaughNow respecte votre vie privée et s'engage à protéger vos données. La présente politique décrit :-->
+        <!--{it}LaughNow rispetta la tua privacy e si impegna a proteggere i tuoi dati. La presente politica descrive:-->
+        <!--{nl}LaughNow respecteert uw privacy en doet er alles aan om uw gegevens te beschermen. Het huidige beleid beschrijft:-->
+        <!--{nb}LaughNow respekterer personvernet ditt og er forpliktet til å beskytte dataene dine. Denne policyen beskriver:-->
+        <!--{pt}A LaughNow respeita sua privacidade e está empenhada em proteger seus dados. A presente política descreve:-->
+        <!--{sv}LaughNow respekterar din integritet och är engagerad i att skydda dina data. Den nuvarande policyn beskriver:-->
+      </p>
+      <div style="clear: both;"></div>
+      <ul style="text-align: left; font-size: 17px; margin-top: 10px;">
+        <li>
+          The types of information we may collect or that you may provide when you install, register with, access, or use the LaughNow app or our website.
+          <!--{ca}Els tipus d'informació que podem recopilar o que podeu proporcionar quan instal·leu, us registreu, accediu o utilitzeu l'aplicació LaughNow o el nostre lloc web.-->
+        <!--{da}De typer af oplysninger, vi kan indsamle, eller som du måtte give, når du installerer, registrerer dig hos, får adgang til eller bruger LaughNow-appen eller vores hjemmeside.-->
+        <!--{de}Die Arten von Informationen, die wir möglicherweise sammeln oder die Sie bereitstellen, wenn Sie die LaughNow-App oder unsere Website installieren, registrieren, darauf zugreifen oder sie nutzen.-->
+        <!--{es}Los tipos de información que podemos recopilar o que puedes proporcionar al instalar, registrarte, acceder o utilizar la aplicación LaughNow o nuestro sitio web.-->
+        <!--{fr}Les types d'informations que nous pouvons collecter ou que vous pouvez fournir lorsque vous installez, vous inscrivez, accédez ou utilisez l'application LaughNow ou notre site Web.-->
+        <!--{it}I tipi di informazioni che potremmo raccogliere o che potresti fornire quando installi, ti registri, accedi o usi l'app LaughNow o il nostro sito web.-->
+        <!--{nl}De soorten informatie die we kunnen verzamelen of die u verstrekt wanneer u de LaughNow-app of onze website installeert, registreert, opent of gebruikt.-->
+        <!--{nb}Typen informasjon vi kan samle inn eller som du kan oppgi når du installerer, registrerer deg hos, får tilgang til eller bruker LaughNow-appen eller nettstedet vårt.-->
+        <!--{pt}Os tipos de informações que podemos coletar ou que você pode fornecer ao instalar, registrar-se, acessar ou usar o aplicativo LaughNow ou nosso site.-->
+        <!--{sv}De typer av information vi kan samla in eller som du kan tillhandahålla när du installerar, registrerar dig hos, kommer åt eller använder LaughNow-appen eller vår webbplats.-->
+        </li>
+        <br>
+        <li>
+          Our practices for collecting and protecting that information.
+          <!--{ca}Les nostres pràctiques per recopilar i protegir aquesta informació.-->
+        <!--{da}Vores praksis for indsamling og beskyttelse af disse oplysninger.-->
+        <!--{de}Unsere Praktiken zum Sammeln und Schützen dieser Informationen.-->
+        <!--{es}Nuestras prácticas para recopilar y proteger esa información.-->
+        <!--{fr}Nos pratiques de collecte et de protection de ces informations.-->
+        <!--{it}Le nostre pratiche per la raccolta e la protezione di tali informazioni.-->
+        <!--{nl}Onze praktijken voor het verzamelen en beschermen van die informatie.-->
+        <!--{nb}Vår praksis for å samle inn og beskytte denne informasjonen.-->
+        <!--{pt}Nossas práticas para coletar e proteger essas informações.-->
+        <!--{sv}Våra rutiner för att samla in och skydda denna information.-->
+        </li>
+      </ul>
+      <br>
+      <p style="float: left; text-align: left; margin-top: -5px; font-size: 17px;">
+        This policy applies only to information we collect in our app and in our website.
+        <!--{ca}Aquesta política només s'aplica a la informació que recollim a la nostra aplicació i al nostre lloc web.-->
+        <!--{da}Denne politik gælder kun for oplysninger, vi indsamler i vores app og på vores hjemmeside.-->
+        <!--{de}Diese Richtlinie gilt nur für Informationen, die wir in unserer App und auf unserer Website sammeln.-->
+        <!--{es}Esta política se aplica solo a la información que recopilamos en nuestra aplicación y en nuestro sitio web.-->
+        <!--{fr}Cette politique s'applique uniquement aux informations que nous recueillons dans notre application et sur notre site Web.-->
+        <!--{it}Questa politica si applica solo alle informazioni che raccogliamo nella nostra app e nel nostro sito web.-->
+        <!--{nl}Dit beleid is alleen van toepassing op informatie die we verzamelen in onze app en op onze website.-->
+        <!--{nb}Denne policyen gjelder kun for informasjon vi samler inn i appen vår og på nettsiden vår.-->
+        <!--{pt}Esta política se aplica apenas às informações que coletamos em nosso aplicativo e em nosso site.-->
+        <!--{sv}Denna policy gäller endast information vi samlar in i vår app och på vår webbplats.-->
+        <br>
+        <br>
+        Please read this policy carefully to understand our practices regarding your data security. If you do not agree with our policies and practices, do not install or use the LaughNow app.
+        <!--{ca}Si us plau, llegiu atentament aquesta política per entendre les nostres pràctiques pel que fa a la seguretat de les vostres dades. Si no esteu d'acord amb les nostres polítiques i pràctiques, no instal·leu ni utilitzeu l'aplicació LaughNow.-->
+        <!--{da}Læs venligst denne politik omhyggeligt for at forstå vores praksis vedrørende din datasikkerhed. Hvis du ikke er enig i vores politikker og praksis, skal du ikke installere eller bruge LaughNow-appen.-->
+        <!--{de}Bitte lesen Sie diese Richtlinie sorgfältig durch, um unsere Praktiken in Bezug auf Ihre Datensicherheit zu verstehen. Wenn Sie mit unseren Richtlinien und Praktiken nicht einverstanden sind, installieren oder verwenden Sie die LaughNow-App nicht.-->
+        <!--{es}Lee atentamente esta política para comprender nuestras prácticas con respecto a la seguridad de tus datos. Si no estás de acuerdo con nuestras políticas y prácticas, no instales ni uses la app de LaughNow.-->
+        <!--{fr}Veuillez lire attentivement cette politique pour comprendre nos pratiques concernant la sécurité de vos données. Si vous n'êtes pas d'accord avec nos politiques et pratiques, n'installez pas et n'utilisez pas l'application LaughNow.-->
+        <!--{it}Si prega di leggere attentamente questa politica per comprendere le nostre pratiche relative alla sicurezza dei dati. Se non sei d'accordo con le nostre politiche e pratiche, non installare o utilizzare l'app LaughNow.-->
+        <!--{nl}Lees dit beleid aandachtig door om onze praktijken met betrekking tot uw gegevensbeveiliging te begrijpen. Als u het niet eens bent met ons beleid en onze praktijken, installeer of gebruik de LaughNow-app dan niet.-->
+        <!--{nb}Vennligst les denne policyen nøye for å forstå vår praksis angående datasikkerheten din. Hvis du ikke er enig i retningslinjene og praksisene våre, må du ikke installere eller bruke LaughNow-appen.-->
+        <!--{pt}Por favor, leia esta política cuidadosamente para entender nossas práticas em relação à segurança de seus dados. Se você não concorda com nossas políticas e práticas, não instale ou use o aplicativo LaughNow.-->
+        <!--{sv}Vänligen läs denna policy noggrant för att förstå vår praxis angående din datasäkerhet. Om du inte håller med vår policy och praxis ska du inte installera eller använda LaughNow-appen.-->
+        <br>
+        <br>
+        By installing or using our app, you agree to this privacy policy. This policy may update from time to time. Your continued use of LaughNow after we modify this policy means you accept those changes. Please check the policy periodically for updates.
+        <!--{ca}En instal·lar o utilitzar la nostra aplicació, acceptes aquesta política de privadesa. Aquesta política es pot actualitzar de tant en tant. El vostre ús continuat de LaughNow després de modificar aquesta política significa que accepteu aquests canvis. Si us plau, consulteu la política periòdicament per obtenir actualitzacions.-->
+        <!--{da}Ved at installere eller bruge vores app accepterer du denne privatlivspolitik. Denne politik kan opdateres fra tid til anden. Din fortsatte brug af LaughNow efter vi har ændret denne politik betyder, at du accepterer disse ændringer. Tjek venligst politikken med jævne mellemrum for opdateringer.-->
+        <!--{de}Durch die Installation oder Nutzung unserer App stimmen Sie dieser Datenschutzrichtlinie zu. Diese Richtlinie kann von Zeit zu Zeit aktualisiert werden. Wenn Sie LaughNow weiterhin nutzen, nachdem wir diese Richtlinie geändert haben, akzeptieren Sie diese Änderungen. Bitte überprüfen Sie die Richtlinie regelmäßig auf Aktualisierungen.-->
+        <!--{es}Al instalar o usar nuestra aplicación, aceptas esta política de privacidad. Esta política puede actualizarse de vez en cuando. El uso continuo de LaughNow después de que modifiquemos esta política significa que aceptas esos cambios. Por favor revisa la política periódicamente para actualizaciones.-->
+        <!--{fr}En installant ou en utilisant notre application, vous acceptez cette politique de confidentialité. Cette politique peut être mise à jour de temps à autre. Votre utilisation continue de LaughNow après que nous ayons modifié cette politique signifie que vous acceptez ces changements. Veuillez vérifier périodiquement la politique pour les mises à jour.-->
+        <!--{it}Installando o utilizzando la nostra app, accetti questa politica sulla privacy. Questa politica può essere aggiornata di tanto in tanto. L'uso continuato di LaughNow dopo la modifica di questa politica implica l'accettazione di tali modifiche. Si prega di controllare periodicamente la politica per gli aggiornamenti.-->
+        <!--{nl}Door onze app te installeren of te gebruiken, gaat u akkoord met dit privacybeleid. Dit beleid kan van tijd tot tijd worden bijgewerkt. Als u LaughNow blijft gebruiken nadat we dit beleid hebben gewijzigd, betekent dit dat u deze wijzigingen accepteert. Controleer het beleid regelmatig op updates.-->
+        <!--{nb}Ved å installere eller bruke appen vår godtar du denne personvernerklæringen. Denne policyen kan oppdateres fra tid til annen. Din fortsatte bruk av LaughNow etter at vi har endret denne policyen betyr at du godtar disse endringene. Vennligst sjekk retningslinjene med jevne mellomrom for oppdateringer.-->
+        <!--{pt}Ao instalar ou usar nosso aplicativo, você concorda com esta política de privacidade. Esta política pode ser atualizada de tempos em tempos. Seu uso continuado do LaughNow após modificarmos esta política significa que você aceita essas alterações. Por favor, verifique a política periodicamente para atualizações.-->
+        <!--{sv}Genom att installera eller använda vår app godkänner du denna integritetspolicy. Denna policy kan uppdateras då och då. Din fortsatta användning av LaughNow efter att vi ändrat denna policy innebär att du accepterar dessa ändringar. Kontrollera regeln regelbundet för uppdateringar.-->
+      </p>
+      <div style="clear: both;"></div>
+      <br>
+      <h3 style="float: left; font-size: 20px;">
+        Information we collect
+        <!--{ca}Informació que recollim-->
+        <!--{da}Oplysninger, vi indsamler-->
+        <!--{de}Informationen, die wir sammeln-->
+        <!--{es}Información que recopilamos-->
+        <!--{fr}Informations que nous collectons-->
+        <!--{it}Informazioni che raccogliamo-->
+        <!--{nl}Informatie die we verzamelen-->
+        <!--{nb}Informasjon vi samler inn-->
+        <!--{pt}Informações que coletamos-->
+        <!--{sv}Information vi samlar in-->
+      </h3>
+      <div style="clear: both;"></div>
+      <p style="float: left; text-align: left; margin-top: -5px; font-size: 17px;">
+        We collect information from users automatically when they use our app.
+        <!--{ca}Recopilem informació dels usuaris automàticament quan utilitzen la nostra aplicació.-->
+        <!--{da}Vi indsamler oplysninger fra brugere automatisk, når de bruger vores app.-->
+        <!--{de}Wir erfassen automatisch Informationen von Benutzern, wenn sie unsere App nutzen.-->
+        <!--{es}Recopilamos información de los usuarios automáticamente cuando usan nuestra aplicación.-->
+        <!--{fr}Nous recueillons automatiquement des informations auprès des utilisateurs lorsqu'ils utilisent notre application.-->
+        <!--{it}Raccogliamo informazioni dagli utenti automaticamente quando utilizzano la nostra app.-->
+        <!--{nl}We verzamelen automatisch informatie van gebruikers wanneer ze onze app gebruiken.-->
+        <!--{nb}Vi samler inn informasjon fra brukere automatisk når de bruker appen vår.-->
+        <!--{pt}Coletamos informações dos usuários automaticamente quando eles usam nosso aplicativo.-->
+        <!--{sv}Vi samlar in information från användare automatiskt när de använder vår app.-->
+        <br>
+        <br>
+        Our third parties, such as Microsoft, may collect additional information from and about users at their convenience. Review Microsoft's Privacy Statement
+        <!--{ca}Els nostres tercers, com ara Microsoft, poden recopilar informació addicional dels usuaris i sobre els usuaris a la seva conveniència. Reviseu la Declaració de privadesa de Microsoft-->
+        <!--{da}Vores tredjeparter, såsom Microsoft, kan indsamle yderligere oplysninger fra og om brugere, når det passer dem. Gennemgå Microsofts fortrolighedserklæring-->
+        <!--{de}Unsere Drittanbieter, wie z. B. Microsoft, können nach eigenem Ermessen zusätzliche Informationen von und über Benutzer sammeln. Lesen Sie die Datenschutzerklärung von Microsoft-->
+        <!--{es}Nuestros terceros, como Microsoft, pueden recopilar información adicional de y sobre los usuarios a su conveniencia. Revise la Declaración de Privacidad de Microsoft-->
+        <!--{fr}Nos tiers, tels que Microsoft, peuvent collecter des informations supplémentaires auprès des utilisateurs et à leur sujet à leur convenance. Consultez la déclaration de confidentialité de Microsoft-->
+        <!--{it}Le nostre terze parti, come Microsoft, possono raccogliere informazioni aggiuntive da e sugli utenti a loro piacimento. Consulta l'informativa sulla privacy di Microsoft-->
+        <!--{nl}Onze derde partijen, zoals Microsoft, kunnen naar eigen goeddunken aanvullende informatie van en over gebruikers verzamelen. Bekijk de privacyverklaring van Microsoft-->
+        <!--{nb}Våre tredjeparter, som Microsoft, kan samle inn tilleggsinformasjon fra og om brukere når det passer for dem. Les Microsofts personvernerklæring-->
+        <!--{pt}Nossos terceiros, como a Microsoft, podem coletar informações adicionais de e sobre os usuários conforme sua conveniência. Revise a Declaração de Privacidade da Microsoft-->
+        <!--{sv}Våra tredje parter, såsom Microsoft, kan samla in ytterligare information från och om användare när det passar dem. Läs Microsofts sekretesspolicy-->
+        <a class="a-priv" href="">
+          here
+        <!--{ca}aquí-->
+        <!--{da}her-->
+        <!--{de}hier-->
+        <!--{es}aquí-->
+        <!--{fr}ici-->
+        <!--{it}qui-->
+        <!--{nl}hier-->
+        <!--{nb}her-->
+        <!--{pt}aqui-->
+        <!--{sv}här-->
+        </a>
+      </p>
+      <div style="clear: both;"></div>
+      <br>
+      <h3 style="float: left; font-size: 20px;">
+        Profile information
+        <!--{ca}Informació del perfil-->
+        <!--{da}Profiloplysninger-->
+        <!--{de}Profil Information-->
+        <!--{es}Información del perfil-->
+        <!--{fr}Informations sur le profil-->
+        <!--{it}Informazioni del profilo-->
+        <!--{nl}Profiel informatie-->
+        <!--{nb}Profil informasjon-->
+        <!--{pt}Informação do Perfil-->
+        <!--{sv}Profilinformation-->
+      </h3>
+      <div style="clear: both;"></div>
+      <p style="float: left; text-align: left; margin-top: -5px; font-size: 17px;">
+        When registering for our app, users are required to create a profile. Information provided to set up a profile, such as a name or profile picture, is stored privately in the user's device. No one, not even LaughNow, has access to this information.
+        <!--{ca}Quan es registren a la nostra aplicació, els usuaris han de crear un perfil. La informació proporcionada per configurar un perfil, com ara un nom o una imatge de perfil, s'emmagatzema de manera privada al dispositiu de l'usuari. Ningú, ni tan sols LaughNow, té accés a aquesta informació.-->
+        <!--{da}Ved tilmelding til vores app skal brugerne oprette en profil. Oplysninger, der gives til at oprette en profil, såsom et navn eller et profilbillede, gemmes privat på brugerens enhed. Ingen, ikke engang LaughNow, har adgang til disse oplysninger.-->
+        <!--{de}Bei der Registrierung für unsere App ist die Erstellung eines Profils erforderlich. Informationen, die zum Einrichten eines Profils bereitgestellt werden, wie z. B. ein Name oder ein Profilbild, werden privat auf dem Gerät des Benutzers gespeichert. Niemand, nicht einmal LaughNow, hat Zugriff auf diese Informationen.-->
+        <!--{es}Al registrarse en nuestra aplicación, los usuarios deben crear un perfil. La información proporcionada para configurar un perfil, como un nombre o una foto de perfil, se almacena de forma privada en el dispositivo del usuario. Nadie, ni siquiera LaughNow, tiene acceso a esta información.-->
+        <!--{fr}Lors de l'inscription à notre application, les utilisateurs doivent créer un profil. Les informations fournies pour configurer un profil, telles qu'un nom ou une photo de profil, sont stockées de manière privée sur l'appareil de l'utilisateur. Personne, pas même LaughNow, n'a accès à ces informations.-->
+        <!--{it}Al momento della registrazione per la nostra app, gli utenti devono creare un profilo. Le informazioni fornite per impostare un profilo, come un nome o un'immagine del profilo, vengono archiviate privatamente nel dispositivo dell'utente. Nessuno, nemmeno LaughNow, ha accesso a queste informazioni.-->
+        <!--{nl}Bij het registreren voor onze app moeten gebruikers een profiel aanmaken. Informatie die wordt verstrekt om een profiel in te stellen, zoals een naam of profielfoto, wordt privé opgeslagen op het apparaat van de gebruiker. Niemand, zelfs LaughNow niet, heeft toegang tot deze informatie.-->
+        <!--{nb}Når du registrerer deg for appen vår, må brukere opprette en profil. Informasjon som gis for å sette opp en profil, for eksempel navn eller profilbilde, lagres privat på brukerens enhet. Ingen, ikke engang LaughNow, har tilgang til denne informasjonen.-->
+        <!--{pt}Ao se registrar em nosso aplicativo, os usuários devem criar um perfil. As informações fornecidas para configurar um perfil, como nome ou foto do perfil, são armazenadas de forma privada no dispositivo do usuário. Ninguém, nem mesmo o LaughNow, tem acesso a essas informações.-->
+        <!--{sv}När du registrerar dig för vår app måste användarna skapa en profil. Information som tillhandahålls för att skapa en profil, till exempel ett namn eller en profilbild, lagras privat i användarens enhet. Ingen, inte ens LaughNow, har tillgång till denna information.-->
+      </p>
+      <div style="clear: both;"></div>
+      <br>
+      <h3 style="float: left; font-size: 20px;">
+        Streak and laughter attempts
+        <!--{ca}Ratxa i intents de riure-->
+        <!--{da}Stribe- og latterforsøg-->
+        <!--{de}Streik- und Lachversuche-->
+        <!--{es}Racha e intentos de risa-->
+        <!--{fr}Séquence-->
+        <!--{it}Striscia-->
+        <!--{nl}Streak-->
+        <!--{nb}Strek-->
+        <!--{pt}sequência-->
+        <!--{sv}Streak-->
+      </h3>
+      <div style="clear: both;"></div>
+      <p style="float: left; text-align: left; margin-top: -5px; font-size: 17px;">
+        LaughNow keeps track of how many times a user has laughed and how many times a user has tried to laugh. Both values are securely stored on the user's device and no one, including LaughNow, can see those values.
+        <!--{ca}LaughNow fa un seguiment de quantes vegades ha rigut un usuari i quantes vegades ha intentat riure. Tots dos valors s'emmagatzemen de forma segura al dispositiu de l'usuari i ningú, inclòs LaughNow, pot veure aquests valors.-->
+        <!--{da}LaughNow holder styr på, hvor mange gange en bruger har grinet, og hvor mange gange en bruger har forsøgt at grine. Begge værdier er sikkert gemt på brugerens enhed, og ingen, inklusive LaughNow, kan se disse værdier.-->
+        <!--{de}LaughNow verfolgt, wie oft ein Benutzer gelacht hat und wie oft ein Benutzer versucht hat zu lachen. Beide Werte werden sicher auf dem Gerät des Benutzers gespeichert und niemand, auch nicht LaughNow, kann diese Werte sehen.-->
+        <!--{es}LaughNow realiza un seguimiento de cuántas veces se ha reído un usuario y cuántas veces ha intentado reírse. Ambos valores se almacenan de forma segura en el dispositivo del usuario y nadie, incluido LaughNow, puede ver esos valores.-->
+        <!--{fr}LaughNow garde une trace du nombre de fois qu'un utilisateur a ri et combien de fois un utilisateur a essayé de rire. Les deux valeurs sont stockées en toute sécurité sur l'appareil de l'utilisateur et personne, y compris LaughNow, ne peut voir ces valeurs.-->
+        <!--{it}LaughNow tiene traccia di quante volte un utente ha riso e quante volte un utente ha provato a ridere. Entrambi i valori sono archiviati in modo sicuro sul dispositivo dell'utente e nessuno, incluso LaughNow, può vederli.-->
+        <!--{nl}LaughNow houdt bij hoe vaak een gebruiker heeft gelachen en hoe vaak een gebruiker heeft geprobeerd te lachen. Beide waarden worden veilig opgeslagen op het apparaat van de gebruiker en niemand, ook niet LaughNow, kan die waarden zien.-->
+        <!--{nb}LaughNow holder styr på hvor mange ganger en bruker har ledd og hvor mange ganger en bruker har prøvd å le. Begge verdiene er sikkert lagret på brukerens enhet, og ingen, inkludert LaughNow, kan se disse verdiene.-->
+        <!--{pt}O LaughNow registra quantas vezes um usuário riu e quantas vezes tentou rir. Ambos os valores são armazenados com segurança no dispositivo do usuário e ninguém, incluindo LaughNow, pode ver esses valores.-->
+        <!--{sv}LaughNow håller reda på hur många gånger en användare har skrattat och hur många gånger en användare har försökt att skratta. Båda värdena är säkert lagrade på användarens enhet och ingen, inklusive LaughNow, kan se dessa värden.-->
+      </p>
+      <div style="clear: both;"></div>
+      <br>
+      <h3 style="float: left; font-size: 20px;">
+        Additional information
+        <!--{ca}Informació adicional-->
+        <!--{da}Yderligere Information-->
+        <!--{de}Weitere Informationen-->
+        <!--{es}Información adicional-->
+        <!--{fr}Informations complémentaires-->
+        <!--{it}Informazioni aggiuntive-->
+        <!--{nl}Extra informatie-->
+        <!--{nb}Ytterligere informasjon-->
+        <!--{pt}Informações adicionais-->
+        <!--{sv}Ytterligare information-->
+      </h3>
+      <div style="clear: both;"></div>
+      <p style="float: left; text-align: left; margin-top: -5px; font-size: 17px;">
+        We may request additional information to follow up on help tickets.
+        <!--{ca}És possible que sol·licitem informació addicional per fer un seguiment dels bitllets d'ajuda.-->
+        <!--{da}Vi kan anmode om yderligere oplysninger for at følge op på hjælpebilletter.-->
+        <!--{de}Wir können zusätzliche Informationen anfordern, um Hilfetickets weiterzuverfolgen.-->
+        <!--{es}Es posible que solicitemos información adicional para dar seguimiento a los tickets de ayuda.-->
+        <!--{fr}Nous pouvons demander des informations supplémentaires pour assurer le suivi des tickets d'assistance.-->
+        <!--{it}Potremmo richiedere ulteriori informazioni per dare seguito ai ticket di assistenza.-->
+        <!--{nl}We kunnen om aanvullende informatie vragen om hulptickets op te volgen.-->
+        <!--{nb}Vi kan be om tilleggsinformasjon for å følge opp hjelpebilletter.-->
+        <!--{pt}Podemos solicitar informações adicionais para acompanhar os tíquetes de ajuda.-->
+        <!--{sv}Vi kan begära ytterligare information för att följa upp hjälpbiljetter.-->
+        <br>
+        <br>
+        You may provide additional information when you contact us (such as your name, email address or phone number).
+        <!--{ca}Podeu proporcionar informació addicional quan us poseu en contacte amb nosaltres (com ara el vostre nom, adreça de correu electrònic o número de telèfon).-->
+        <!--{da}Du kan give yderligere oplysninger, når du kontakter os (såsom dit navn, e-mailadresse eller telefonnummer).-->
+        <!--{de}Wenn Sie mit uns Kontakt aufnehmen, können Sie zusätzliche Informationen angeben (z. B. Ihren Namen, Ihre E-Mail-Adresse oder Telefonnummer).-->
+        <!--{es}Es posible que proporciones información adicional cuando te comuniques con nosotros (como tu nombre, dirección de correo electrónico o número de teléfono).-->
+        <!--{fr}Vous pouvez fournir des informations supplémentaires lorsque vous nous contactez (telles que votre nom, votre adresse e-mail ou votre numéro de téléphone).-->
+        <!--{it}Puoi fornire ulteriori informazioni quando ci contatti (come il tuo nome, indirizzo e-mail o numero di telefono).-->
+        <!--{nl}U kunt aanvullende informatie verstrekken wanneer u contact met ons opneemt (zoals uw naam, e-mailadres of telefoonnummer).-->
+        <!--{nb}Du kan oppgi tilleggsinformasjon når du kontakter oss (som navn, e-postadresse eller telefonnummer).-->
+        <!--{pt}Você pode fornecer informações adicionais quando entrar em contato conosco (como seu nome, endereço de e-mail ou número de telefone).-->
+        <!--{sv}Du kan ge ytterligare information när du kontaktar oss (som ditt namn, din e-postadress eller ditt telefonnummer).-->
+        <br>
+        <br>
+        Additionally collected information will be stored until there's no further need for LaughNow to keep it (e.g. after closing a help ticket).
+        <!--{ca}La informació recopilada addicionalment s'emmagatzemarà fins que LaughNow ja no calgui conservar-la (p. ex., després de tancar un bitllet d'ajuda).-->
+        <!--{da}Yderligere indsamlede oplysninger vil blive gemt, indtil der ikke længere er behov for, at LaughNow opbevarer dem (f.eks. efter at have lukket en hjælpebillet).-->
+        <!--{de}Zusätzlich erfasste Informationen werden so lange gespeichert, bis LaughNow sie nicht mehr aufbewahren muss (z. B. nach dem Schließen eines Hilfetickets).-->
+        <!--{es}La información recopilada adicionalmente se almacenará hasta que LaughNow ya no necesite conservarla (por ejemplo, después de cerrar un ticket de ayuda).-->
+        <!--{fr}Les informations supplémentaires collectées seront stockées jusqu'à ce que LaughNow n'ait plus besoin de les conserver (par exemple, après la fermeture d'un ticket d'aide).-->
+        <!--{it}Inoltre, le informazioni raccolte verranno archiviate fino a quando LaughNow non avrà più bisogno di conservarle (ad es. dopo aver chiuso un ticket di assistenza).-->
+        <!--{nl}Aanvullend verzamelde informatie wordt bewaard totdat LaughNow deze niet meer hoeft te bewaren (bijvoorbeeld na het sluiten van een helpticket).-->
+        <!--{nb}I tillegg innsamlet informasjon vil bli lagret til det ikke lenger er behov for LaughNow å beholde den (f.eks. etter å ha stengt en hjelpebillett).-->
+        <!--{pt}Além disso, as informações coletadas serão armazenadas até que não haja mais necessidade do LaughNow mantê-las (por exemplo, após fechar um tíquete de ajuda).-->
+        <!--{sv}Ytterligare insamlad information kommer att lagras tills LaughNow inte längre behöver behålla den (t.ex. efter att ha stängt en hjälpbiljett).-->
+      </p>
+      <div style="clear: both;"></div>
+      <br>
+      <h3 style="float: left; font-size: 20px;">
+        How we use your information
+        <!--{ca}Com fem servir la teva informació-->
+        <!--{da}Hvordan vi bruger dine oplysninger-->
+        <!--{de}Wie wir Ihre Informationen verwenden-->
+        <!--{es}Cómo usamos tu información-->
+        <!--{fr}Comment nous utilisons vos informations-->
+        <!--{it}Come utilizziamo le tue informazioni-->
+        <!--{nl}Hoe wij uw informatie gebruiken-->
+        <!--{nb}Hvordan vi bruker informasjonen din-->
+        <!--{pt}Como usamos suas informações-->
+        <!--{sv}Hur vi använder din information-->
+      </h3>
+      <div style="clear: both;"></div>
+      <p style="float: left; text-align: left; margin-top: -5px; font-size: 17px;">
+        We use information that we collect about you or that you provide to us to:
+        <!--{ca}Utilitzem la informació que recopilem sobre vostè o que ens proporcioneu per:-->
+        <!--{da}Wir verwenden Informationen, die wir über Sie sammeln oder die Sie uns zur Verfügung stellen, um:-->
+        <!--{de}Wie wir Ihre Informationen verwenden-->
+        <!--{es}Utilizamos la información que recopilamos sobre ti o que nos proporcionas para:-->
+        <!--{fr}Nous utilisons les informations que nous collectons à votre sujet ou que vous nous fournissez pour :-->
+        <!--{it}Utilizziamo le informazioni che raccogliamo su di te o che ci fornisci per:-->
+        <!--{nl}We gebruiken informatie die we over u verzamelen of die u ons verstrekt om:-->
+        <!--{nb}Vi bruker informasjon som vi samler inn om deg eller som du gir oss til å:-->
+        <!--{pt}Usamos as informações que coletamos sobre você ou que você nos fornece para:-->
+        <!--{sv}Vi använder information som vi samlar in om dig eller som du lämnar till oss för att:-->
+      </p>
+      <br>
+      <ul style="text-align: left; font-size: 17px;">
+        <li>
+          Provide you with our app or other services that you request from us.
+          <!--{ca}Oferir-vos la nostra aplicació o altres serveis que ens sol·liciteu.-->
+        <!--{da}Forsyne dig med vores app eller andre tjenester, som du anmoder om fra os.-->
+        <!--{de}Bereitstellung unserer App oder anderer Dienste, die Sie bei uns anfordern.-->
+        <!--{es}Proporcionarte nuestra aplicación u otros servicios que nos solicites.-->
+        <!--{fr}Vous fournir notre application ou d'autres services que vous nous demandez.-->
+        <!--{it}Fornirti la nostra app o altri servizi che ci richiedi.-->
+        <!--{nl}U voorzien van onze app of andere diensten die u bij ons aanvraagt.-->
+        <!--{nb}Gi deg appen vår eller andre tjenester du ber om fra oss.-->
+        <!--{pt}Fornecer a você nosso aplicativo ou outros serviços que você solicitar de nós.-->
+        <!--{sv}Förse dig med vår app eller andra tjänster som du begär från oss.-->
+        </li>
+        <br>
+        <li>
+          Meet any other purpose for which you provide it.
+          <!--{ca}Complir amb qualsevol altre propòsit per al qual el proporcioneu.-->
+        <!--{da}Mød ethvert andet formål, som du giver det til.-->
+        <!--{de}Erfüllen Sie jeden anderen Zweck, für den Sie es bereitstellen.-->
+        <!--{es}Cumplir con cualquier otra finalidad para la cual hayas facilitado esta información.-->
+        <!--{fr}Répondez à toute autre fin pour laquelle vous les fournissez.-->
+        <!--{it}Soddisfare qualsiasi altro scopo per il quale lo fornisci.-->
+        <!--{nl}Elk ander doel ontmoeten waarvoor u het verstrekt.-->
+        <!--{nb}Møt ethvert annet formål du gir det til.-->
+        <!--{pt}Atender a qualquer outra finalidade para a qual você o fornece.-->
+        <!--{sv}Träffa alla andra syften som du tillhandahåller den för.-->
+        </li>
+      </ul>
+      <div style="clear: both;"></div>
+      <br>
+      <h3 style="float: left; font-size: 20px;">
+        Changes to our privacy policy
+        <!--{ca}Canvis a la nostra política de privadesa-->
+        <!--{da}Ændringer i vores privatlivspolitik-->
+        <!--{de}Änderungen unserer Datenschutzerklärung-->
+        <!--{es}Cambios a nuestra política de privacidad-->
+        <!--{fr}Modifications de notre politique de confidentialité-->
+        <!--{it}Modifiche alla nostra politica sulla privacy-->
+        <!--{nl}Wijzigingen in ons privacybeleid-->
+        <!--{nb}Endringer i vår personvernerklæring-->
+        <!--{pt}Alterações à nossa política de privacidade-->
+        <!--{sv}Ändringar i vår integritetspolicy-->
+      </h3>
+      <div style="clear: both;"></div>
+      <p style="float: left; text-align: left; margin-top: -5px; font-size: 17px;">
+        We may update our privacy policy from time to time. If we complete modifications to it, we will publish the new privacy policy on this page.
+        <!--{ca}És possible que actualitzem la nostra política de privadesa de tant en tant. Si completem modificacions, publicarem la nova política de privadesa en aquesta pàgina.-->
+        <!--{da}Vi kan opdatere vores privatlivspolitik fra tid til anden. Hvis vi gennemfører ændringer af den, vil vi offentliggøre den nye privatlivspolitik på denne side.-->
+        <!--{de}Wir können unsere Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Wenn wir Änderungen daran vornehmen, werden wir die neue Datenschutzrichtlinie auf dieser Seite veröffentlichen.-->
+        <!--{es}Es posible que actualicemos nuestra política de privacidad de vez en cuando. Si completamos modificaciones a la misma, publicaremos la nueva política de privacidad en esta página.-->
+        <!--{fr}Nous pouvons mettre à jour notre politique de confidentialité de temps à autre. Si nous y apportons des modifications, nous publierons la nouvelle politique de confidentialité sur cette page.-->
+        <!--{it}Potremmo aggiornare la nostra politica sulla privacy di volta in volta. Se lo modificheremo, pubblicheremo la nuova informativa sulla privacy in questa pagina.-->
+        <!--{nl}We kunnen ons privacybeleid van tijd tot tijd bijwerken. Als we wijzigingen aanbrengen, zullen we het nieuwe privacybeleid op deze pagina publiceren.-->
+        <!--{nb}Vi kan oppdatere personvernreglene våre fra tid til annen. Hvis vi fullfører endringer i den, vil vi publisere den nye personvernreglene på denne siden.-->
+        <!--{pt}Podemos atualizar nossa política de privacidade de tempos em tempos. Se concluirmos as modificações, publicaremos a nova política de privacidade nesta página.-->
+        <!--{sv}Vi kan uppdatera vår integritetspolicy då och då. Om vi genomför ändringar av den kommer vi att publicera den nya integritetspolicyn på denna sida.-->
+      </p>
+      <div style="clear: both;"></div>
+      <br>
+      <h3 style="float: left; font-size: 20px;">
+        Contact information
+        <!--{ca}Informació de contacte-->
+        <!--{da}Kontakt information-->
+        <!--{de}Kontaktinformationen-->
+        <!--{es}Información de contacto-->
+        <!--{fr}Informations de contact-->
+        <!--{it}Informazioni sui contatti-->
+        <!--{nl}Contactgegevens-->
+        <!--{nb}Kontaktinformasjon-->
+        <!--{pt}Informações de contato-->
+        <!--{sv}Kontaktinformation-->
+      </h3>
+      <div style="clear: both;"></div>
+      <p style="float: left; text-align: left; margin-top: -5px; font-size: 17px;">
+       For more information on our privacy policy and privacy practices, contact us at: 
+        <!--{ca}Per obtenir més informació sobre la nostra política de privadesa i pràctiques de privadesa, poseu-vos en contacte amb nosaltres a:-->
+        <!--{da}For mere information om vores privatlivspolitik og privatlivspraksis, kontakt os på:-->
+        <!--{de}Für weitere Informationen zu unseren Datenschutzrichtlinien und Datenschutzpraktiken kontaktieren Sie uns unter:-->
+        <!--{es}Para obtener más información sobre nuestra política de privacidad y prácticas de privacidad, contáctanos en:-->
+        <!--{fr}Pour plus d'informations sur notre politique de confidentialité et nos pratiques en matière de confidentialité, contactez-nous à :-->
+        <!--{it}Per ulteriori informazioni sulla nostra politica sulla privacy e pratiche sulla privacy, contattaci a:-->
+        <!--{nl}Neem voor meer informatie over ons privacybeleid en onze privacypraktijken contact met ons op via:-->
+        <!--{nb}For mer informasjon om vår personvernerklæring og personvernpraksis, kontakt oss på:-->
+        <!--{pt}Para obter mais informações sobre nossa política de privacidade e práticas de privacidade, entre em contato conosco em:-->
+        <!--{sv}För mer information om vår integritetspolicy och sekretesspraxis, kontakta oss på:-->
+        <a class="a-priv" href="">humans@laughnow.app</a>
+      </p>
+      <div style="clear: both;"></div>
+      <br>
+      <br>
+      <br>
+      <div class="footer">
+      <a class="footer-a-d touch-action lang-t" id="lang-g-t" style="font-weight: 600; color: #000000;">
+         EN
+          <!--{ca}CA-->
+          <!--{da}DA-->
+          <!--{de}DE-->
+          <!--{es}ES-->
+          <!--{fr}FR-->
+          <!--{it}IT-->
+          <!--{nl}NL-->
+          <!--{nb}NB-->
+          <!--{pt}PT-->
+          <!--{fi}FI-->
+          <!--{sv}SV-->
+          <!--{mi}MI-->
+          <!--{el}EL-->
+          <!--{zh}ZH-->
+          <!--{ja}JA-->
+          <!--{ko}KO-->
+        </a>
+        &emsp;
+        <a class="footer-a-d footer-hide" href="https://laughnow.app/privacy" style="color: #000000;">
+          Privacy
+          <!--{ca}Privadesa-->
+          <!--{da}Anonymitet-->
+          <!--{de}Datenschutz-->
+          <!--{es}Privacidad-->
+          <!--{fr}Confidentialité-->
+          <!--{it}Privacy-->
+          <!--{nl}Privacy-->
+          <!--{nb}Personvern-->
+          <!--{pt}Privacidade-->
+          <!--{sv}Integritet-->
+        </a>
+        &emsp;
+        <a class="footer-a-d footer-hide" href="https://laughnow.app/terms">
+          Terms
+          <!--{ca}Condicions d'ús-->
+          <!--{da}Betingelser-->
+          <!--{de}Bedingungen-->
+          <!--{es}Términos-->
+          <!--{fr}Conditions-->
+          <!--{it}Condizioni-->
+          <!--{nl}Voorwaarden-->
+          <!--{nb}Betingelser-->
+          <!--{pt}Termos-->
+          <!--{sv}Villkor-->
+        </a>
+        &emsp;
+        <a class="footer-a-d footer-hide" href="https://laughnow.app/help">
+          Help
+          <!--{ca}Ajuda-->
+          <!--{da}Hjælp-->
+          <!--{de}Hilfe-->
+          <!--{es}Ayuda-->
+          <!--{fr}Aider-->
+          <!--{it}Aiuto-->
+          <!--{nl}Hulp-->
+          <!--{nb}Hjelp-->
+          <!--{pt}Ajuda-->
+          <!--{sv}Hjälp-->
+        </a>
+        &emsp;
+        <a class="footer-a-d footer-hide" href="https://cdn.laughnow.app/press-kit.zip">
+          Press kit
+          <!--{ca}Kit de premsa-->
+          <!--{da}Pressemateriale-->
+          <!--{de}Pressemappe-->
+          <!--{es}Kit de prensa-->
+          <!--{fr}Dossier de presse-->
+          <!--{it}Cartella stampa-->
+          <!--{nl}Persbericht-->
+          <!--{nb}Pressepakke-->
+          <!--{pt}Kit de imprensa-->
+          <!--{sv}Presskit-->
+        </a>
+      <div style="clear: both; height: 50px;"></div>
+    </div>
+      </div>
+    </center>
+          <div class="overlay" id="landing-o"></div>
+      <div class="m emerge" id="lang-g" style="left: 10%;">
+            <a href="javascript:tran.setLang('ca');">
+            <div class="m-item" ontouchstart>
+              <p style="color: inherit; text-decoration: none;  text-align: left; float: left; margin-left: 12px; display: inline-block; line-height: 44px; margin-top: 0;">
+            Català
+          </p>
+            </div>
+            </a>
+            <a href="javascript:tran.setLang('da');">
+            <div class="m-item" ontouchstart>
+              <p style="color: inherit; text-decoration: none;  text-align: left; float: left; margin-left: 12px; display: inline-block; line-height: 44px; margin-top: 0;">
+            Dansk
+          </p>
+            </div>
+            </a>
+            <a href="javascript:tran.setLang('de');">
+            <div class="m-item" ontouchstart>
+              <p style="color: inherit; text-decoration: none;  text-align: left; float: left; margin-left: 12px; display: inline-block; line-height: 44px; margin-top: 0;">
+            Deutsch
+          </p>
+            </div>
+            </a>
+            <a href="javascript:tran.setLang('default');">
+            <div class="m-item" ontouchstart>
+              <p style="color: inherit; text-decoration: none;  text-align: left; float: left; margin-left: 12px; display: inline-block; line-height: 44px; margin-top: 0;">
+            English
+          </p>
+            </div>
+            </a>
+            <a href="javascript:tran.setLang('es');">
+            <div class="m-item" ontouchstart>
+              <p style="color: inherit; text-decoration: none;  text-align: left; float: left; margin-left: 12px; display: inline-block; line-height: 44px; margin-top: 0;">
+            Español
+          </p>
+            </div>
+            </a>
+            <a href="javascript:tran.setLang('fr');">
+            <div class="m-item" ontouchstart>
+              <p style="color: inherit; text-decoration: none;  text-align: left; float: left; margin-left: 12px; display: inline-block; line-height: 44px; margin-top: 0;">
+            Français
+          </p>
+            </div>
+            </a>
+            <a href="javascript:tran.setLang('it');">
+            <div class="m-item" ontouchstart>
+              <p style="color: inherit; text-decoration: none;  text-align: left; float: left; margin-left: 12px; display: inline-block; line-height: 44px; margin-top: 0;">
+            Italiano
+          </p>
+            </div>
+            </a>
+            <a href="javascript:tran.setLang('nl');">
+            <div class="m-item" ontouchstart>
+              <p style="color: inherit; text-decoration: none;  text-align: left; float: left; margin-left: 12px; display: inline-block; line-height: 44px; margin-top: 0;">
+            Nederlands
+          </p>
+            </div>
+            </a>
+            <a href="javascript:tran.setLang('nb');">
+            <div class="m-item" ontouchstart>
+              <p style="color: inherit; text-decoration: none;  text-align: left; float: left; margin-left: 12px; display: inline-block; line-height: 44px; margin-top: 0;">
+            Norsk bokmål
+          </p>
+            </div>
+            </a>
+            <a href="javascript:tran.setLang('pt');">
+            <div class="m-item" ontouchstart>
+              <p style="color: inherit; text-decoration: none;  text-align: left; float: left; margin-left: 12px; display: inline-block; line-height: 44px; margin-top: 0;">
+            Português
+          </p>
+            </div>
+            </a>
+            <a href="javascript:tran.setLang('sv');">
+            <div class="m-item" style="border-bottom: none;" ontouchstart>
+              <p style="color: inherit; text-decoration: none;  text-align: left; float: left; margin-left: 12px; display: inline-block; line-height: 44px; margin-top: 0;">
+            Svenska
+          </p>
+            </div>
+            </a>
+          </div>
+    <script>
+      var tran = new Translater();
+    if (tran.getLang() === "default") tran.setLang('en');
+    </script>
+    <script>
+      document.querySelector("#lang-g-t").addEventListener("click", function () {
+  document.querySelector("#lang-g").style.display = "block";
+  document.querySelector("#landing-o").style.display = "block";
+}); 
+      
+document.querySelector("#landing-o").addEventListener("click", function () {
+  document.querySelector("#lang-g").style.display = "none";
+  document.querySelector("#landing-o").style.display = "none";
+}); 
+    </script>
+  </body>
+</html>
