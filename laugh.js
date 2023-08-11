@@ -78,8 +78,7 @@ var punsarray = Array(
   "What kind of drink can be bitter and sweet? Reali-tea.",
   "Why do bees have sticky hair? Because they use a honeycomb.",
   "What’s the most detail-oriented ocean? The Pacific.",
-  "When does a joke become a “dad joke?” When it becomes apparent.
-",
+  "When does a joke become a “dad joke?” When it becomes apparent.",
   "Why did the man fall down the well? Because he couldn’t see that well.",
   "Why did the coach go to the bank? To get his quarterback.",
   "How do celebrities stay cool? They have many fans.",
