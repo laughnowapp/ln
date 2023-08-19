@@ -313,18 +313,31 @@ function usern() {
   document.getElementById("name-i-s").value = na;
 }
 
+var SI_SYMBOL = ["", "k", "M", "G", "T", "P", "E"];
+
+function abbreviateNumber(number){
+    var tier = Math.log10(Math.abs(number)) / 3 | 0;
+    if(tier == 0) return number;
+    var suffix = SI_SYMBOL[tier];
+    var scale = Math.pow(10, tier * 3);
+    var scaled = number / scale;
+    return scaled.toFixed(1) + suffix;
+}
+
 function laat() {
   var attemptcount = localStorage.getItem("attcount");
-  document.getElementById("la-track-2").innerHTML = attemptcount;
-document.getElementById("la-track-1").innerHTML = attemptcount;
+  var attformat = abbreviateNumber(attemptcount);
+  document.getElementById("la-track-2").innerHTML = attformat;
+  document.getElementById("la-track-1").innerHTML = attformat;
 }
 
 function stat() {
   var streak = localStorage.getItem("laughstreak");
-  document.getElementById("streak-track-1").innerHTML = streak;
-    document.getElementById("streak-track-2").innerHTML = streak;
-    document.getElementById("streak-track-3").innerHTML = streak;
-  document.getElementById("streak-track-4").innerHTML = streak;
+  var streakformat = abbreviateNumber(streak);
+  document.getElementById("streak-track-1").innerHTML = streakformat;
+    document.getElementById("streak-track-2").innerHTML = streakformat;
+    document.getElementById("streak-track-3").innerHTML = streakformat;
+  document.getElementById("streak-track-4").innerHTML = streakformat;
 }
 
 function laughAttempts() {
