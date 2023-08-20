@@ -1569,5 +1569,21 @@ var x = window.matchMedia("(max-width: 550px)")
 myFunction(x)
 x.addListener(myFunction)
     </script>
+    <script>
+            var lnRemind;
+navigator.serviceWorker.register('sw.js');
+Notification.requestPermission(function(result) {
+ if (result === 'granted') {
+  navigator.serviceWorker.ready.then(function(registration) {
+   lnRemind = setInterval(function () {
+     registration.showNotification('Daily reminder from LaughNow', {
+    body: 'Take a moment to laugh today',
+    icon: 'https://cdn.laughnow.app/icons/app-icon-pride.png'
+  });
+   }, 86400000);
+  });
+ }
+});
+    </script>
   </body>
 </html>
