@@ -36,6 +36,7 @@
       OneSignalDeferred.push(function(OneSignal) {
         OneSignal.init({
           appId: "5c2bd805-6023-4adf-b8a3-f0e194806e42",
+          safari_web_id: "web.onesignal.auto.3fd215f3-eebf-45ec-a840-b342bc8d8df9",
         });
       });
     </script>
@@ -1289,7 +1290,7 @@
             </p>
           </div>
           </div>
-            <button class="blbg reveal" style="margin-top: 10px; position: fixed; position: -webkit-fixed; bottom: 20px; margin: 0; left: 0; right: 0; margin-left: auto; margin-right: auto;" id="cont-o-2">
+            <button class="blbg reveal" style="margin-top: 10px; position: fixed; position: -webkit-fixed; bottom: 20px; margin: 0; left: 0; right: 0; margin-left: auto; margin-right: auto;" id="cont-o-2" onclick="OneSignal.Notifications.requestPermission();">
           Skip
           <!--{ca}Omet-->
           <!--{da}Spring over-->
