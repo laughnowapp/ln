@@ -1682,55 +1682,5 @@ var x = window.matchMedia("(max-width: 550px)")
 myFunction(x)
 x.addListener(myFunction)
     </script>
-    <script>
-      function onManageWebPushSubscriptionButtonClicked(event) {
-        if (OneSignal.User.PushSubscription.optedIn) {
-          /* Subscribed, opt them out */
-          OneSignal.User.PushSubscription.optOut();
-        } else {
-          /* Opted out, opt them back in */
-          OneSignal.User.PushSubscription.optIn();
-        }
-        event.preventDefault();
-    }
-
-    function updateMangeWebPushSubscriptionButton(buttonSelector) {
-        var hideWhenSubscribed = false;
-        var subscribeText = "Turn on laughter reminders";
-        var unsubscribeText = "Turn off laughter reminders";
-
-        var buttonText = OneSignal.User.PushSubscription.optedIn ? subscribeText : unsubscribeText;
-  
-        var element = document.querySelector(buttonSelector);
-        if (element === null) {
-          return;
-        }
-  
-        element.removeEventListener('click', onManageWebPushSubscriptionButtonClicked);
-        element.addEventListener('click', onManageWebPushSubscriptionButtonClicked);
-        element.textContent = buttonText;
-
-        if (hideWhenSubscribed && state.isPushEnabled) {
-          element.style.display = "none";
-        } else {
-          element.style.display = "";
-        }
-    }
-
-    var buttonSelector = "#notif-p";
-
-    /* This example assumes you've already initialized OneSignal */
-    OneSignalDeferred.push(async function(OneSignal) {
-        // If we're on an unsupported browser, do nothing
-        if (!OneSignal.isPushNotificationsSupported()) {
-            return;
-        }
-        updateMangeWebPushSubscriptionButton(buttonSelector);
-        OneSignal.User.PushSubscription.addEventListener('change', function(event) {
-            /* If the user's subscription state changes during the page's session, update the button text */
-            updateMangeWebPushSubscriptionButton(buttonSelector);
-        });
-    });
-    </script>
   </body>
 </html>
