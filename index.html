@@ -32,13 +32,22 @@
     </script>
     <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
     <script>
-      window.OneSignalDeferred = window.OneSignalDeferred || [];
-  OneSignalDeferred.push(function(OneSignal) {
-    OneSignal.init({
-      appId: "5c2bd805-6023-4adf-b8a3-f0e194806e42",
-      safari_web_id: "web.onesignal.auto.3fd215f3-eebf-45ec-a840-b342bc8d8df9",
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+     window.OneSignalDeferred.push(async function(OneSignal) {
+      OneSignal.init({
+        appId: "5c2bd805-6023-4adf-b8a3-f0e194806e42",
+        autoResubscribe: true,
+        notifyButton: {
+          enable: false,
+        },
+        welcomeNotification: {
+          "title": "My Custom Title",
+          "message": "Thanks for subscribing!",
+          // "url": "" /* Leave commented for the notification to not open a window on Chrome and Firefox (on Safari, it opens to your webpage) */
+        }
+      });
+      OneSignal.Notifications.requestPermission();
     });
-  });
     </script>
   </head>
   <body>
