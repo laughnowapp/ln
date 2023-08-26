@@ -162,6 +162,18 @@ document.querySelector("#danger-s-c").addEventListener("click", function () {
   document.querySelector("#danger-s").style.display = "none";
 }); 
 
+document.querySelector("#notif-s-t").addEventListener("click", function () {
+  document.querySelector("#notif-s").style.display = "block";
+}); 
+
+document.getElementById("notif-s").addEventListener("swiped-right", function(e) {
+    document.querySelector("#notif-s").style.display = "none";
+});
+
+document.querySelector("#notif-s-c").addEventListener("click", function () {
+  document.querySelector("#notif-s").style.display = "none";
+});
+
 document.querySelector("#ti-laugh").addEventListener("click", function () {
   document.querySelector("#laugh-sel").style.display = "block";
   document.querySelector("#laugh-no").style.display = "none";
