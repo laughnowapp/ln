@@ -21,10 +21,6 @@ body {
   display: none;
 }
 
-#landing {
-    display: block;
-}
-
 img {
   object-fit: cover;
 }
@@ -66,6 +62,7 @@ img {
 
 .sheet {
   width: 100%;
+  max-width: 600px;
   height: calc(100% - 40px);
   background-color: #1C1C1E;
   position: fixed;
@@ -124,18 +121,8 @@ img {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
-  #app {
-    display: block;
-  }
-  
-  #landing {
-    display: none;
-  }
-  
-  #ath-o {
-    display: block;
-  }
+#landing {
+  display: none;
 }
 
 .touch-action {
@@ -424,6 +411,7 @@ input[type="file"] {
 
 .blbg {
     width: 90%;
+    max-width: 350px;
     height: 54px;
     border-radius: 20px;
     border: none;
