@@ -421,18 +421,6 @@ document.querySelector("#cont-o-2").addEventListener("click", function () {
   document.querySelector("#onboarding").style.display = "none";
 }); 
 
-if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-    document.querySelector("#ath").src = "https://cdn.laughnow.app/mobile/o_ath_ios.mp4";
-  document.querySelector("#ath-o").display = "block";
-}
-else if (/android/i.test(navigator.userAgent)) {
-      document.querySelector("#ath").src = "https://cdn.laughnow.app/mobile/o_ath_android.mp4";
-  document.querySelector("#ath-o").display = "block";  
-}
-else {
-  document.querySelector("#ath-o").display = "none"; 
-}
-
 document.querySelector("#lang-g-t").addEventListener("click", function () {
   document.querySelector("#lang-g").style.display = "block";
   document.querySelector("#landing-o").style.display = "block";
@@ -513,8 +501,7 @@ var input = document.querySelector("#pic-up");
       }
 
 $( document ).ready(function() {
-             if (localStorage.getItem("pageloadcount")) { $("#onboarding").hide();
-$("#ath-o").hide();      
+             if (localStorage.getItem("pageloadcount")) { $("#onboarding").hide();     
          } 
              localStorage.setItem("pageloadcount", "1");
          });
