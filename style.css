@@ -121,6 +121,16 @@ img {
   display: none;
 }
 
+.landing-h1 {
+  font-size: 85px; 
+}
+
+@media screen and (max-width: 600px) {
+  #ath-o {
+    display: block;
+  }
+}
+
 #landing {
   display: none;
 }
@@ -560,6 +570,7 @@ a {
   float: left;
   filter: drop-shadow(0px 0px 10px rgba(0 0 0 / 20%));
   pointer-events: none;
+  width: 240px; 
 }
 
 .img3 {
@@ -569,6 +580,7 @@ a {
   float: right;
   filter: drop-shadow(0px 0px 10px rgba(0 0 0 / 20%));
   pointer-events: none;
+  width: 240px; 
 }
 
 .img2 {
@@ -581,6 +593,7 @@ a {
   margin-right: auto;
   filter: drop-shadow(0px 0px 40px rgba(0 0 0 / 20%));
   pointer-events: none;
+  width: 350px;
 }
 
 .emergeleft {
