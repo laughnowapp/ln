@@ -305,6 +305,7 @@
         <div style="width: calc(100% - 30px); margin-top: 10px; display: inline-block;">
           <textarea placeholder="Today I laughed at..." id="textarea" maxlength="80" onkeyup="sharetext()"></textarea>
           <input type="text" id="sharetext" style="display: none;">
+          <input type="text" id="sharepun" style="display: none;">
           <button class="blbg touch-action" onclick="streak();emojisplosion();" style="width: 100%; float: none; margin-left: 0px; margin-bottom: 15px;" id="streak-s-c">
                   <span style="position: relative; top: -3px; margin-left: 4px;">
                     Add moment to streak
@@ -1672,7 +1673,7 @@ x.addListener(myFunction)
           navigator.share({
             title: document.getElementById("sharepun").value,
             text: "“" + document.getElementById("sharepun").value + "”" + " — Via LaughNow",
-            url: document.location.href
+            url: "https://laughnow.app"
           }).then(() => {
             console.log('');
           })
