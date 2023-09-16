@@ -431,131 +431,115 @@ document.querySelector("#landing-o").addEventListener("click", function () {
   document.querySelector("#landing-o").style.display = "none";
 });
 
-function laughlang() {
-  var laughscript = document.getElementById("laughscript");
-  laughscript.src = localStorage.getItem("laughlang");
-}
-
 document.querySelector("#lang-en").addEventListener("click", function () {
-  localStorage.setItem("laughlang", "https://laughnow.app/laugh.js");
-  document.getElementById('laughscript').src = "laugh.js";
+  document.getElementById('laughscript').src = "https://laughnow.app/laugh.js";
   puns();
 }); 
 
 document.querySelector("#lang-ca").addEventListener("click", function () {
-  localStorage.setItem("laughlang", "https://cdn.laughnow.app/laugh/ca.js");
   document.getElementById('laughscript').src = "https://cdn.laughnow.app/laugh/ca.js";
   puns();
 }); 
 
 document.querySelector("#lang-da").addEventListener("click", function () {
-  localStorage.setItem("laughlang", "https://cdn.laughnow.app/laugh/da.js");
   document.getElementById('laughscript').src = "https://cdn.laughnow.app/laugh/da.js";
   puns();
 });
 
 document.querySelector("#lang-de").addEventListener("click", function () {
-  localStorage.setItem("laughlang", "https://cdn.laughnow.app/laugh/de.js");
   document.getElementById('laughscript').src = "https://cdn.laughnow.app/laugh/de.js";
   puns();
 }); 
 
 document.querySelector("#lang-es").addEventListener("click", function () {
-  localStorage.setItem("laughlang", "https://cdn.laughnow.app/laugh/es.js");
   document.getElementById('laughscript').src = "https://cdn.laughnow.app/laugh/es.js";
   puns();
 }); 
 
 document.querySelector("#lang-fr").addEventListener("click", function () {
-  localStorage.setItem("laughlang", "https://cdn.laughnow.app/laugh/fr.js");
   document.getElementById('laughscript').src = "https://cdn.laughnow.app/laugh/fr.js";
   puns();
 });
 
 document.querySelector("#lang-it").addEventListener("click", function () {
-  localStorage.setItem("laughlang", "https://cdn.laughnow.app/laugh/it.js");
   document.getElementById('laughscript').src = "https://cdn.laughnow.app/laugh/it.js";
   puns();
 }); 
 
 document.querySelector("#lang-nl").addEventListener("click", function () {
-  localStorage.setItem("laughlang", "https://cdn.laughnow.app/laugh/nl.js");
   document.getElementById('laughscript').src = "https://cdn.laughnow.app/laugh/nl.js";
   puns();
 });
 
 document.querySelector("#lang-nb").addEventListener("click", function () {
-  localStorage.setItem("laughlang", "https://cdn.laughnow.app/laugh/nb.js");
   document.getElementById('laughscript').src = "https://cdn.laughnow.app/laugh/nb.js";
   puns();
 });
 
 document.querySelector("#lang-pt").addEventListener("click", function () {
-  localStorage.setItem("laughlang", "https://cdn.laughnow.app/laugh/pt.js");
   document.getElementById('laughscript').src = "https://cdn.laughnow.app/laugh/pt.js";
   puns();
 });
 
 document.querySelector("#lang-sv").addEventListener("click", function () {
-  localStorage.setItem("laughlang", "https://cdn.laughnow.app/laugh/sv.js");
   document.getElementById('laughscript').src = "https://cdn.laughnow.app/laugh/sv.js";
   puns();
 }); 
 
 document.querySelector("#lang-en-2").addEventListener("click", function () {
-  document.getElementById('cont-o-1').onclick = "localStorage.setItem('laughlang', 'https://laughnow.app/laugh.js')";
+  document.getElementById('laughscript').src = "laugh.js";
   puns();
 }); 
 
 document.querySelector("#lang-ca-2").addEventListener("click", function () {
-  document.getElementById('cont-o-1').onclick = "localStorage.setItem('laughlang', 'https://cdn.laughnow.app/laugh/ca.js')";
+  document.getElementById('laughscript').src = "https://cdn.laughnow.app/laugh/ca.js";
   puns();
 }); 
 
 document.querySelector("#lang-da-2").addEventListener("click", function () {
-  document.getElementById('cont-o-1').onclick = "localStorage.setItem('laughlang', 'https://cdn.laughnow.app/laugh/da.js')";
+  document.getElementById('laughscript').src = "https://cdn.laughnow.app/laugh/da.js";
   puns();
 });
 
 document.querySelector("#lang-de-2").addEventListener("click", function () {
-  document.getElementById('cont-o-1').onclick = "localStorage.setItem('laughlang', 'https://cdn.laughnow.app/laugh/de.js')";
+  document.getElementById('laughscript').src = "https://cdn.laughnow.app/laugh/de.js";
   puns();
 }); 
 
 document.querySelector("#lang-es-2").addEventListener("click", function () {
-  document.getElementById('cont-o-1').onclick = "localStorage.setItem('laughlang', 'https://cdn.laughnow.app/laugh/es.js')";
+  document.getElementById('laughscript').src = "https://cdn.laughnow.app/laugh/es.js";
   puns();
 }); 
 
 document.querySelector("#lang-fr-2").addEventListener("click", function () {
-  document.getElementById('cont-o-1').onclick = "localStorage.setItem('laughlang', 'https://cdn.laughnow.app/laugh/fr.js')";
+  document.getElementById('laughscript').src = "https://cdn.laughnow.app/laugh/fr.js";
   puns();
 });
 
 document.querySelector("#lang-it-2").addEventListener("click", function () {
-  document.getElementById('cont-o-1').onclick = "localStorage.setItem('laughlang', 'https://cdn.laughnow.app/laugh/it.js')";
+  document.getElementById('laughscript').src = "https://cdn.laughnow.app/laugh/it.js";
   puns();
 }); 
 
 document.querySelector("#lang-nl-2").addEventListener("click", function () {
-  document.getElementById('cont-o-1').onclick = "localStorage.setItem('laughlang', 'https://cdn.laughnow.app/laugh/nl.js')";
+  document.getElementById('laughscript').src = "https://cdn.laughnow.app/laugh/nl.js";
   puns();
 });
 
 document.querySelector("#lang-nb-2").addEventListener("click", function () {
-  document.getElementById('cont-o-1').onclick = "localStorage.setItem('laughlang', 'https://cdn.laughnow.app/laugh/nb.js')";
+  document.getElementById('laughscript').src = "https://cdn.laughnow.app/laugh/nb.js";
   puns();
 });
 
 document.querySelector("#lang-pt-2").addEventListener("click", function () {
-  document.getElementById('cont-o-1').onclick = "localStorage.setItem('laughlang', 'https://cdn.laughnow.app/laugh/pt.js')";
+  document.getElementById('laughscript').src = "https://cdn.laughnow.app/laugh/pt.js";
   puns();
 });
 
 document.querySelector("#lang-sv-2").addEventListener("click", function () {
-  document.getElementById('cont-o-1').onclick = "localStorage.setItem('laughlang', 'https://cdn.laughnow.app/laugh/sv.js')";
+  document.getElementById('laughscript').src = "https://cdn.laughnow.app/laugh/sv.js";
   puns();
-}); 
+});  
 
 var textarea = document.getElementById("textarea");
 var limit = 80;
