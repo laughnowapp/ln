@@ -138,18 +138,6 @@ document.querySelector("#appic-s-c").addEventListener("click", function () {
   document.querySelector("#appic-s").style.display = "none";
 });
 
-document.querySelector("#lang-s-t").addEventListener("click", function () {
-  document.querySelector("#lang-s").style.display = "block";
-}); 
-
-document.getElementById("lang-s").addEventListener("swiped-right", function(e) {
-    document.querySelector("#lang-s").style.display = "none";
-});
-
-document.querySelector("#lang-s-c").addEventListener("click", function () {
-  document.querySelector("#lang-s").style.display = "none";
-});
-
 document.querySelector("#danger-s-t").addEventListener("click", function () {
   document.querySelector("#danger-s").style.display = "block";
 }); 
@@ -396,17 +384,6 @@ document.querySelector("#data-d").addEventListener("click", function () {
   window.location.reload();
 });
 
-document.querySelector("#lang-o-m").addEventListener("click", function () {
-  document.querySelector("#o-m").style.display = "block";
-  document.querySelector("#o-m").className = "m emerge";
-  document.querySelector("#overlay-o").style.display = "block";
-}); 
-
-document.querySelector("#overlay-o").addEventListener("click", function () {
-  document.querySelector("#o-m").className = "m immerse";
-  document.querySelector("#overlay-o").style.display = "none";
-});
-
 document.querySelector("#name-i-o").addEventListener("click", function () {
   document.querySelector("#i-cont-o").style.border = "solid 1.4px #FFFFFF";
 }); 
@@ -420,16 +397,6 @@ document.querySelector("#cont-o-2").addEventListener("click", function () {
   document.querySelector("#o-2").style.display = "none";
   document.querySelector("#onboarding").style.display = "none";
 }); 
-
-document.querySelector("#lang-g-t").addEventListener("click", function () {
-  document.querySelector("#lang-g").style.display = "block";
-  document.querySelector("#landing-o").style.display = "block";
-}); 
-
-document.querySelector("#landing-o").addEventListener("click", function () {
-  document.querySelector("#lang-g").style.display = "none";
-  document.querySelector("#landing-o").style.display = "none";
-});
 
 var textarea = document.getElementById("textarea");
 var limit = 80;
