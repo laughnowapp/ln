@@ -432,7 +432,7 @@ document.querySelector("#landing-o").addEventListener("click", function () {
 });
 
 function laughlang() {
-  var laughscript = document.getElementById('laughscript');
+  var laughscript = document.getElementById("laughscript");
   laughscript.src = localStorage.getItem("laughlang");
 }
 
