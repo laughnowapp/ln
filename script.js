@@ -437,7 +437,7 @@ function laughlang() {
 }
 
 document.querySelector("#lang-en").addEventListener("click", function () {
-  localStorage.setItem("laughlang", "laugh.js");
+  localStorage.setItem("laughlang", "https://laughnow.app/laugh.js");
   document.getElementById('laughscript').src = "laugh.js";
   puns();
 }); 
@@ -503,7 +503,7 @@ document.querySelector("#lang-sv").addEventListener("click", function () {
 }); 
 
 document.querySelector("#lang-en-2").addEventListener("click", function () {
-  document.getElementById('cont-o-1').onclick = "localStorage.setItem('laughlang', 'laugh.js')";
+  document.getElementById('cont-o-1').onclick = "localStorage.setItem('laughlang', 'https://laughnow.app/laugh.js')";
   puns();
 }); 
 
