@@ -11,6 +11,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/swiped-events/1.1.7/swiped-events.min.js" integrity="sha512-q2rGCiN6EL2X7aJwVzSD6E0GbpfcGSjipdpZ12lqArQfSMb/LTDXlSFZLrohrSanuRk2/oP96lb14NNgPCAZPw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <meta name="title" content="LaughNow">
     <meta name="description" content="The point is to make you laugh">
     <meta name="keywords" content="laugh now, laughnow, LaughNow, laughnow app, fun apps, fun">
@@ -405,6 +407,59 @@
           <br>
         </div>
       </div>
+      <div class="sheet reveal" id="share-s" style="background: #111111; box-shadow: 0px -2px 20px rgba(0 0 0 / 40%); display: block; height: 85vh;">
+        <div class="s-h" id="share-s-h">
+          <div style="width: 40px; height: 5px; border-radius: 5px; background: #3C3C4360; position: relative; top: 8px;"></div>
+          <h4 style="line-height: 50px; margin-top: 0px; font-weight: 600;">
+            Share this
+          </h4>
+        </div>
+        <br>
+        <br>
+        <div style="width: calc(100% - 30px);">
+            <div style="width: 100%; padding-bottom: 100%; background: #000000; border-radius: 20px; overflow: hidden; position: relative;">
+              <div style="width: 80%; height: auto; background: #141414; border-radius: 12px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); overflow: hidden;">
+                <h2 id="shareprev" style="text-align: left; padding-left: 15px; padding-right: 15px; margin-top: 10px; margin-bottom: -20px; font-weight: 600;"></h2>
+                <br>
+                <h5 style="text-align: left; margin-left: 15px; margin-top: 10px; margin-bottom: 15px; font-weight: 500;">— Via LaughNow</h5>
+                <div style="float: left; position: relative; left: 15px; padding-bottom: 0px; margin-bottom: -2px; display: inline-block;">
+                  <img src="..." id="sh-pr-img" style="width: 20px; height: 20px; border-radius: 4px; display: inline-block;">
+                  &nbsp;
+                  <p style="color: #ABABAB; text-align: left; display: inline-block; position: relative; top: -2px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #ABABAB; width: 15px;">
+                      <path xmlns="http://www.w3.org/2000/svg" d="M479.504-261q59.752 0 109.624-28Q639-317 669-366.4q6-12.6-1.729-24.1-7.729-11.5-22.155-11.5H314.77q-14.844 0-22.307 11Q285-380 292-367.4q29 49.477 79 77.938Q421-261 479.504-261ZM347-571l26 25q7.636 9 21.318 9Q408-537 417-545.5q9-8.5 9-21.5t-9-22l-36-37q-14.2-14-33.6-14-19.4 0-33.4 14l-37 37q-9 9.091-8.5 22.045Q269-554 278-545q9 9 22 8.5t22-9.5l25-25Zm267.477 0L640-546q7.714 9 21 9t22-8.5q9-8.136 9-21.818Q692-581 683-590l-36-36q-14.2-14-33.6-14-19.4 0-33.4 14l-35 37q-9 8.714-9 21.5t9 21.5q8.636 9 21.818 9Q580-537 589-546l25.477-25ZM480.138-55Q392-55 314.5-88T179-179q-58-58-91-135.362t-33-165.5Q55-568 88-645.5t90.843-135.553q57.843-58.052 135.278-91.5Q391.557-906 479.779-906q88.221 0 165.839 33.37 77.619 33.37 135.596 91.29 57.978 57.92 91.382 135.46T906-480q0 88.276-33.447 165.76-33.448 77.483-91.5 135.362Q723-121 645.638-88t-165.5 33ZM480-480Zm0 331q138.375 0 234.688-96.312Q811-341.625 811-480t-96.312-234.688Q618.375-811 480-811t-234.688 96.312Q149-618.375 149-480t96.312 234.688Q341.625-149 480-149Z"/>
+                    </svg>
+                    &nbsp;
+                    <span style="font-size: 15px; position: relative; top: -2px; margin-left: -8px;" id="la-track-3">
+                    </span>
+                  </p>
+                  &nbsp;
+                  <p style="color: #ABABAB; text-align: left; display: inline-block; position: relative; top: -2px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #ABABAB; height: 14px;">
+                      <path xmlns="http://www.w3.org/2000/svg" d="m404-181 265-321H497l33-264-241 347h149l-34 238Zm-66-151H213q-28.872 0-42.436-25T174-406l376-542q10-14 25-18.5t30 1.5q15 5 24 19.67 9 14.67 7 30.33l-41 326h159q30.362 0 42.681 27Q809-535 791-512L381-18Q370.558-5.095 355.279-1.548 340 2 325-5.25q-14-6.25-21.5-19.625T298-55l40-277Zm140-140Z"/>
+                    </svg>
+                    &nbsp;
+                    <span style="font-size: 15px; position: relative; top: -2px; margin-left: -8px;" id="streak-track-4">0</span>
+                  </p>
+                </div>
+                <img src="https://cdn.laughnow.app/icons/laughnow-ic.png" style="float: right; position: absolute; right: 15px; bottom: 16px; width: 20px; height: 20px;">
+              </div>
+            </div>
+            <br>
+            <div class="s-i touch-action" style="height: 50px; border-radius: 10px;" id="sharepun-btn">
+              <p style="line-height: 50px; margin-top: 0px; margin-left: 15px; text-align: left; font-weight: 600; float: left;">
+                Share
+              </p>
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #FFFFFF; width: 20px; float: right; margin-right: 12px; display: inline-block; position: relative; top: 13px;">
+                <path xmlns="http://www.w3.org/2000/svg" d="M229-10q-39.05 0-66.525-27.769Q135-65.537 135-105v-458q0-38 27.475-66T229-657h96q19.75 0 33.375 13.675Q372-629.649 372-609.825 372-590 358.375-576.5 344.75-563 325-563h-96v458h502v-458h-97q-20.75 0-34.375-13.675Q586-590.351 586-610.175 586-630 599.625-643.5 613.25-657 634-657h97q39.463 0 67.231 28Q826-601 826-563v458q0 39.463-27.769 67.231Q770.463-10 731-10H229Zm203-759-55 55q-14 14-33.382 14.54-19.382.54-32.809-13.5Q297-727 297-746.5t14.276-33.776L445-916q14.364-14 34.182-14T513-916l135 136q14 14.25 14 33.283t-13.841 32.875Q634.696-700 615.382-700q-19.315 0-33.382-14l-56-55v401q0 19.75-13.675 33.375Q498.649-321 478.825-321 459-321 445.5-334.625 432-348.25 432-368v-401Z"/>
+              </svg>
+            </div>
+            <br>
+            <p style="color: #CCCCCC; float: left; font-size: 14px; margin-top: -5px; text-align: left;">
+             Tip: take a screenshot of the graphic avobe to share as an image anywhere.
+            </p>
+        </div>
+      </div>
       <div class="sheet slide" id="appic-s" style="background: #111111; box-shadow: 0px -2px 20px rgba(0 0 0 / 40%);">
         <div class="s-h" style="border-bottom: none;">
           <h4 style="width: 100%; line-height: 50px; margin-top: 0px; font-weight: 600; margin: 0; left: 0; right: 0;">
@@ -727,21 +782,21 @@ myFunction(x)
 x.addListener(myFunction)
     </script>
     <script>
-const btnpun = document.querySelector("#laugh-text");
-
-btnpun.addEventListener('click', event => {
-  if (navigator.share) {
-    navigator.share({
-      title: document.getElementById("sharepun").value,
-      text: "“" + document.getElementById("sharepun").value + "”" + " — Via LaughNow",
-      url: document.location.href
-    }).then(() => {
-      console.log('');
-    })
-    .catch(console.error);
-  } else {
-  }
-});
-    </script>
+      const btnpun = document.querySelector("#sharepun-btn");
+      
+      btnpun.addEventListener('click', event => {
+        if (navigator.share) {
+          navigator.share({
+            title: document.getElementById("sharepun").value,
+            text: "“" + document.getElementById("sharepun").value + "”" + " — Via LaughNow",
+            url: document.location.href
+          }).then(() => {
+            console.log('');
+          })
+          .catch(console.error);
+        } else {
+        }
+      });
+          </script>
   </body>
 </html>
