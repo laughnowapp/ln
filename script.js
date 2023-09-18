@@ -98,6 +98,7 @@ document.querySelector("#overlay").addEventListener("click", function () {
   document.querySelector("#user-s").style.display = "none";
   document.querySelector("#add-s").style.height = "0px";
   document.querySelector("#add-s").style.display = "none";
+  document.querySelector("#share-s").style.display = "none";
   document.querySelector("#bod-cont").style = "null";
   document.querySelector(".tabbar").style = "null";
   document.querySelector(".s-h").style = "null";
@@ -187,6 +188,23 @@ document.querySelector("#ti-laugh").addEventListener("click", function () {
 document.getElementById("laugh-t").addEventListener("swiped-down", function(e) {
     laughAttempts();
     puns();
+});
+
+document.getElementById("laugh-t").addEventListener("swiped-up", function(e) {
+  document.querySelector("#bod-cont").style.transform = "scale(0.98)";
+  document.querySelector("#bod-cont").style.marginTop = "0px";
+  document.querySelector("#bod-cont").style.opacity = "0.5";
+  document.querySelector("#share-s").style.display = "block";
+  document.querySelector(".tabbar").style.display = "none";
+  document.querySelector("#overlay").style.display = "block";
+});
+
+document.getElementById("share-s-h").addEventListener("swiped-down", function (e) {
+  document.querySelector("#share-s").style.display = "none";
+  document.querySelector("#bod-cont").style = "null";
+  document.querySelector(".tabbar").style = "null";
+  document.querySelector(".s-h").style = "null";
+  document.querySelector("#overlay").style.display = "none";
 });
 
 document.querySelector("#ti-streak").addEventListener("click", function () {
@@ -292,6 +310,7 @@ function userp() {
   document.getElementById("user-s-t").src = x;
   document.getElementById("user-prev").src = x;
   document.getElementById("user-edit").src = x;
+  document.getElementById("sh-pr-img").src = x;
 }
 
 function setname() {
@@ -329,6 +348,7 @@ function laat() {
   var attformat = abbreviateNumber(attemptcount);
   document.getElementById("la-track-2").innerHTML = attformat;
   document.getElementById("la-track-1").innerHTML = attformat;
+  document.getElementById("la-track-3").innerHTML = attformat;
 }
 
 function stat() {
@@ -349,9 +369,11 @@ function laughAttempts() {
     }
     document.getElementById("la-track-1").innerHTML = localStorage.attcount;
     document.getElementById("la-track-2").innerHTML = localStorage.attcount;
+    document.getElementById("la-track-3").innerHTML = localStorage.attcount;
   } else {
     document.getElementById("la-track-1").innerHTML = localStorage.attcount;
     document.getElementById("la-track-2").innerHTML = localStorage.attcount;
+    document.getElementById("la-track-3").innerHTML = localStorage.attcount;
   }
 }
 
@@ -437,9 +459,11 @@ var input = document.querySelector("#pic-up");
           var img = document.querySelector("#user-s-t");
           var img2 = document.querySelector("#user-prev");
           var img3 = document.querySelector("#user-edit");
+          var img4 = document.querySelector("#sh-pr-img");
           img.src = result;
           img2.src = result;
           img3.src = result;
+          img4.src = result;
           localStorage.setItem("userp", result);
         };
       }
