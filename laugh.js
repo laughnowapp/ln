@@ -215,7 +215,7 @@ var punsarray = Array(
   "I was having dinner with the world chess champion and there was a check tablecloth. It took them two hours to pass me the salt.",
   "Some people say the glass is half full. Some people say the glass is half empty. Engineers say the glass is twice as big as necessary.",
   "Team work is important; it helps to put the blame on someone else.",
-  "Nothing ruins a Friday more than an understanding that today is Tuesday."
+  "Nothing ruins a Friday more than an understanding that today is Tuesday.",
   "What do you call a fish with no eyes? A fsh.",
   "There’s a fine line between a numerator and a denominator.",
   "Where does a waitress with only one leg work? IHOP.",
