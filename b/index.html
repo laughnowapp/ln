@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="https://cdn.laughnow.app/icons/app-icon-blue.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>LaughNow</title>
+    <link rel="manifest" href="https://laughnow.app/p/manifest.json">
+    <link rel="stylesheet" href="https://laughnow.app/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/swiped-events/1.1.7/swiped-events.min.js" integrity="sha512-q2rGCiN6EL2X7aJwVzSD6E0GbpfcGSjipdpZ12lqArQfSMb/LTDXlSFZLrohrSanuRk2/oP96lb14NNgPCAZPw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "ickmkgo2ly");
+    </script>
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      OneSignalDeferred.push(function(OneSignal) {
+        OneSignal.init({
+          appId: "5c2bd805-6023-4adf-b8a3-f0e194806e42",
+          safari_web_id: "web.onesignal.auto.3fd215f3-eebf-45ec-a840-b342bc8d8df9",
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="app">
+    <center>
+      <div id="bod-cont">
+        <nav class="topbar">
+          <div class="tb-inner">
+            <h2 style="line-height: 60px; margin-top: 0px; float: left;" id="max-title-laugh">
+              LaughNow
+            </h2>
+            <h2 style="line-height: 60px; margin-top: 0px; float: left; display: none;" id="max-title-streak">
+              My streak
+            </h2>
+            <svg class="touch-action" xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="width: 30px; float: right; fill: #FFFFFF; position: relative; top: 14px; display: none;" id="streak-add-t" ontouchstart><path d="M433-433H222q-19.75 0-33.375-13.675Q175-460.351 175-480.175 175-500 188.625-513.5 202.25-527 222-527h211v-211q0-19.625 13.675-33.812Q460.351-786 480.175-786 500-786 513.5-771.812 527-757.625 527-738v211h211q19.625 0 33.812 13.675Q786-499.649 786-479.825 786-460 771.812-446.5 757.625-433 738-433H527v211q0 19.75-13.675 33.375Q499.649-175 479.825-175 460-175 446.5-188.625 433-202.25 433-222v-211Z"/></svg>
+          </div>
+        </nav>
+        <div style="clear: both;"></div>
+        <div class="t" id="laugh-t">
+          <div style="width: calc(100% - 30px); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <p id="laugh-text"
+            style="font-size: 30px; font-weight: 500; max-width: calc(100% - 30px);">
+        </p>
+        </div>
+          <button class="blbg touch-action" onclick="streak()" style="width: 70%; position: fixed; position: -webkit-fixed; bottom: 70px; margin: 0; left: 0; right: 0; margin-left: auto; margin-right: auto;" id="laugh-s-c">
+                  <span style="position: relative; top: -3px; margin-left: 4px;">
+                    This made me laugh
+                  </span>
+            &nbsp;
+                              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 48 48" style="width: 20px; fill: #000000; position: relative; top: 2px; margin-left: -4px; margin-right: 4px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="M13.3758 28.7221H9.50219C8.90307 28.7221 8.46407 28.4638 8.18517 27.9474C7.90627 27.4309 7.94243 26.9247 8.29363 26.4289L19.9454 9.63305C20.152 9.34383 20.4102 9.15273 20.7201 9.05976C21.03 8.9668 21.3399 8.98229 21.6498 9.10625C21.9596 9.20954 22.2076 9.41097 22.3935 9.71053C22.5794 10.0101 22.6517 10.3251 22.6104 10.6557L21.3399 20.758H26.2671C26.8868 20.758 27.3259 21.0369 27.5841 21.5947C27.8423 22.1525 27.7855 22.669 27.4137 23.1441L14.7083 38.4525C14.5017 38.7211 14.2383 38.8915 13.9181 38.9638C13.5979 39.0362 13.2828 39 12.9729 38.8554C12.6837 38.7314 12.4616 38.53 12.3067 38.2511C12.1517 37.9722 12.0949 37.6572 12.1362 37.306L13.3758 28.7221Z"/>
+   <path xmlns="http://www.w3.org/2000/svg" d="M31.8485 16.6733L34.9673 14.4455V36.5743C34.9673 37.2343 35.2066 37.8036 35.6851 38.2822C36.1637 38.7607 36.733 39 37.393 39C38.0531 39 38.6307 38.7607 39.1257 38.2822C39.6208 37.8036 39.8683 37.2343 39.8683 36.5743V11.1782C39.8683 10.5883 39.645 10.0778 39.1984 9.64663C38.7519 9.21555 38.2344 9 37.6461 9H36.0729C35.8214 9 35.5826 9.04125 35.3563 9.12376C35.13 9.20627 34.9343 9.29703 34.7693 9.39604L29.3732 13.3069C28.9046 13.6377 28.6307 14.067 28.5515 14.5947C28.4723 15.1223 28.5802 15.6054 28.8752 16.0439C29.2066 16.5845 29.6613 16.907 30.2391 17.0115C30.817 17.1161 31.3534 17.0033 31.8485 16.6733Z"/>
+            </svg>
+                </button>
+        </div>
+        <div class="t" id="streak-t" style="display: none;">
+          <div style="width: calc(100% - 30px); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #FFFFFF; height: 60px; display: inline-block;">
+            <path d="m404-181 265-321H497l33-264-241 347h149l-34 238Zm-66-151H213q-28.872 0-42.436-25T174-406l376-542q10-14 25-18.5t30 1.5q15 5 24 19.67 9 14.67 7 30.33l-41 326h159q30.362 0 42.681 27Q809-535 791-512L381-18Q370.558-5.095 355.279-1.548 340 2 325-5.25q-14-6.25-21.5-19.625T298-55l40-277Zm140-140Z"/>
+          </svg>
+            <h1 style="font-size: 100px; display: inline-block; position: relative; top: 2px; font-weight: 600;" id="streak-track-1">
+              0
+            </h1>
+            <div style="clear: both;"></div>
+            <p style="color: #CCCCCC; margin-bottom: 2px; display: inline-block;">
+            Your laugh streak is
+            </p>
+            <span style="color: #CCCCCC; margin-bottom: 2px; display: inline-block;" id="streak-track-2">0</span>
+            <div style="clear: both;"></div>
+            <p style="color: #CCCCCC; margin-top: 0px; display: inline-block;">
+            Your laughter attempt count is
+            </p>
+            <span style="color: #CCCCCC; margin-bottom: 2px; display: inline-block;" id="la-track-1">0</span>
+          </div>
+        </div>
+        <nav class="tabbar">
+          <div class="tb-item touch-action" id="ti-laugh" ontouchstart>
+            <center>
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="width: 22px; fill: #FFFFFF; position: relative; top: 4px; left: 1px; display: none;" id="laugh-no">
+              <path xmlns="http://www.w3.org/2000/svg" d="M479.504-261q59.752 0 109.624-28Q639-317 669-366.4q6-12.6-1.729-24.1-7.729-11.5-22.155-11.5H314.77q-14.844 0-22.307 11Q285-380 292-367.4q29 49.477 79 77.938Q421-261 479.504-261ZM347-571l26 25q7.636 9 21.318 9Q408-537 417-545.5q9-8.5 9-21.5t-9-22l-36-37q-14.2-14-33.6-14-19.4 0-33.4 14l-37 37q-9 9.091-8.5 22.045Q269-554 278-545q9 9 22 8.5t22-9.5l25-25Zm267.477 0L640-546q7.714 9 21 9t22-8.5q9-8.136 9-21.818Q692-581 683-590l-36-36q-14.2-14-33.6-14-19.4 0-33.4 14l-35 37q-9 8.714-9 21.5t9 21.5q8.636 9 21.818 9Q580-537 589-546l25.477-25ZM480.138-55Q392-55 314.5-88T179-179q-58-58-91-135.362t-33-165.5Q55-568 88-645.5t90.843-135.553q57.843-58.052 135.278-91.5Q391.557-906 479.779-906q88.221 0 165.839 33.37 77.619 33.37 135.596 91.29 57.978 57.92 91.382 135.46T906-480q0 88.276-33.447 165.76-33.448 77.483-91.5 135.362Q723-121 645.638-88t-165.5 33ZM480-480Zm0 331q138.375 0 234.688-96.312Q811-341.625 811-480t-96.312-234.688Q618.375-811 480-811t-234.688 96.312Q149-618.375 149-480t96.312 234.688Q341.625-149 480-149Z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="width: 22px; fill: #FFFFFF; position: relative; top: 4px; left: 1px;" id="laugh-sel">
+              <path xmlns="http://www.w3.org/2000/svg" d="M480-261q59.256 0 109.128-28T669-366q6-13-1.479-24.5T645.116-402H314.852q-14.926 0-22.389 11Q285-380 292-367q29 49.077 79 77.538Q421-261 480-261ZM347-571l26 25q8 9 21.5 9t22.5-8.5q9-8.5 9-21.5t-9-22l-36-37q-14.4-14-33.7-14-19.3 0-33.3 14l-37 37q-9 9.455-8.5 22.227Q269-554 278-545t22 8.5q13-.5 22-9.5l25-25Zm267.477 0L640-546q8 9 21 9t22-8.5q9-8.5 9-22t-9-22.5l-36-36q-14.4-14-33.7-14-19.3 0-33.3 14l-35 37q-9 9-9 21.5t9 21.5q9 9 22 9t22-9l25.477-25ZM480.138-55Q392-55 314.5-88T179-179q-58-58-91-135.362t-33-165.5Q55-568 88-645.5t90.843-135.553q57.843-58.052 135.278-91.5Q391.557-906 479.779-906q88.221 0 165.839 33.37 77.619 33.37 135.596 91.29 57.978 57.92 91.382 135.46T906-480q0 88.276-33.447 165.76-33.448 77.483-91.5 135.362Q723-121 645.638-88t-165.5 33Z"/>
+            </svg>
+            <br>
+            <text style="font-size: 12px; position: relative; top: -2px;" id="ti-l-t">
+              Laugh
+              </text>
+            </center>
+          </div>
+          <div class="tb-item touch-action" id="ti-streak" ontouchstart>
+            <center>
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="height: 20px; fill: #FFFFFF; position: relative; top: 4px; left: 1px;" id="streak-no">
+              <path xmlns="http://www.w3.org/2000/svg" d="m404-181 265-321H497l33-264-241 347h149l-34 238Zm-66-151H213q-28.872 0-42.436-25T174-406l376-542q10-14 25-18.5t30 1.5q15 5 24 19.67 9 14.67 7 30.33l-41 326h159q30.362 0 42.681 27Q809-535 791-512L381-18Q370.558-5.095 355.279-1.548 340 2 325-5.25q-14-6.25-21.5-19.625T298-55l40-277Zm140-140Z"/>
+            </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="height: 20px; fill: #FFFFFF; position: relative; top: 4px; left: 1px; display: none;" id="streak-sel">
+                <path xmlns="http://www.w3.org/2000/svg" d="M338-332H213q-29 0-42.5-25t3.5-49l376-542q10-14 25-18.5t30 1.5q15 5 24 19.5t7 30.5l-41 326h159q30 0 42.5 27t-5.5 50L381-18Q371-5 355.5-1.5T325-5q-14-6-21.5-19.5T298-55l40-277Z"/>
+              </svg>
+            <br>
+            <text style="font-size: 12px; position: relative; top: -2px;" id="ti-s-t">
+              Streak
+              </text>
+            </center>
+          </div>
+            <div class="tb-item touch-action" id="ti-user" ontouchstart>
+            <center>
+              <img src="..." class="touch-action" style="width: 20px; height: 20px; border-radius: 4px; position: relative; top: 4px; left: 0px;" id="user-s-t" ontouchstart>
+              <br>
+            <text style="font-size: 12px; position: relative; top: -2px;  margin: 0; left: 0; right: 0; margin-left: auto; margin-right: auto;" id="ti-m-t">
+              Me
+              </text>
+            </center>
+          </div>
+        </nav>
+      </div>
+      <div class="overlay" id="overlay"></div>
+      <div class="sheet reveal" id="user-s" style="height: 220px !important;">
+        <div style="width: calc(100% - 30px); margin-top: 0px; height: 50px; display: inline-block;" id="u-s-h">
+          <h2 style="line-height: 50px; margin-top: 0px; font-weight: 700; text-align: left; float: left;">
+            My LaughNow
+          </h2>
+          <div class="touch-action" id="user-s-c" style="width: 30px; height: 30px; border-radius: 30px; background: #2C2C2E; float: right; position: relative; top: 12px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #EBEBF560; width: 22px; position: relative; top: 4px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="M480-414 282-216q-14 14-33 14t-33-14q-14-14-14-33t14-33l198-198-198-198q-14-14-14-33t14-33q14-14 33-14t33 14l198 198 198-198q14-14 33-14t33 14q14 14 14 33t-14 33L546-480l198 198q14 14 14 33t-14 33q-14 14-33 14t-33-14L480-414Z"/>
+            </svg>
+          </div>
+        </div>
+        <div style="width: calc(100% - 30px); margin-top: 10px; display: inline-block;" id="u-s-c">
+          <img src="..." id="user-prev" style="width: 90px; height: 90px; border-radius: 12px; float: left;">
+          <div style="float: left; margin-left: 15px; text-align: left;">
+            <h3 style="text-align: left; font-size: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 150px;" id="name-prev">
+              Name
+            </h3>
+            <br>
+          <div style="margin-top: -50px;">
+            <p style="color: #ABABAB; text-align: left; display: inline-block;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #ABABAB; width: 15px;">
+                <path xmlns="http://www.w3.org/2000/svg" d="M479.504-261q59.752 0 109.624-28Q639-317 669-366.4q6-12.6-1.729-24.1-7.729-11.5-22.155-11.5H314.77q-14.844 0-22.307 11Q285-380 292-367.4q29 49.477 79 77.938Q421-261 479.504-261ZM347-571l26 25q7.636 9 21.318 9Q408-537 417-545.5q9-8.5 9-21.5t-9-22l-36-37q-14.2-14-33.6-14-19.4 0-33.4 14l-37 37q-9 9.091-8.5 22.045Q269-554 278-545q9 9 22 8.5t22-9.5l25-25Zm267.477 0L640-546q7.714 9 21 9t22-8.5q9-8.136 9-21.818Q692-581 683-590l-36-36q-14.2-14-33.6-14-19.4 0-33.4 14l-35 37q-9 8.714-9 21.5t9 21.5q8.636 9 21.818 9Q580-537 589-546l25.477-25ZM480.138-55Q392-55 314.5-88T179-179q-58-58-91-135.362t-33-165.5Q55-568 88-645.5t90.843-135.553q57.843-58.052 135.278-91.5Q391.557-906 479.779-906q88.221 0 165.839 33.37 77.619 33.37 135.596 91.29 57.978 57.92 91.382 135.46T906-480q0 88.276-33.447 165.76-33.448 77.483-91.5 135.362Q723-121 645.638-88t-165.5 33ZM480-480Zm0 331q138.375 0 234.688-96.312Q811-341.625 811-480t-96.312-234.688Q618.375-811 480-811t-234.688 96.312Q149-618.375 149-480t96.312 234.688Q341.625-149 480-149Z"/>
+              </svg>
+              &nbsp;
+              <span style="font-size: 15px; position: relative; top: -2px; margin-left: -8px;" id="la-track-2">
+              </span>
+            </p>
+            &ensp;
+            <p style="color: #ABABAB; text-align: left; display: inline-block;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #ABABAB; height: 14px;">
+                <path xmlns="http://www.w3.org/2000/svg" d="m404-181 265-321H497l33-264-241 347h149l-34 238Zm-66-151H213q-28.872 0-42.436-25T174-406l376-542q10-14 25-18.5t30 1.5q15 5 24 19.67 9 14.67 7 30.33l-41 326h159q30.362 0 42.681 27Q809-535 791-512L381-18Q370.558-5.095 355.279-1.548 340 2 325-5.25q-14-6.25-21.5-19.625T298-55l40-277Zm140-140Z"/>
+              </svg>
+              &nbsp;
+              <span style="font-size: 15px; position: relative; top: -2px; margin-left: -8px;" id="streak-track-3">0</span>
+            </p>
+          </div>
+          </div>
+          <div class="touch-action" id="edit-t" style="width: auto; height: 30px; background: #2C2C2E; float: right; overflow: hidden; border-radius: 30px; position: relative; top: 30px;">
+            <p style="padding-left: 10px; padding-right: 10px; line-height: 28px; margin-top: 0px; font-weight: 600;">
+              Edit
+            </p>
+          </div>
+        </div>
+        <p class="touch-action" style="text-align: center; font-weight: 500;" id="settings-s-t">
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="width: 20px; fill: #FFFFFF;">
+            <path xmlns="http://www.w3.org/2000/svg" d="M549.391-65.869H410.609q-14.957 0-26.566-9.26-11.609-9.262-13.609-24.218l-15.435-97.044q-15.608-5.304-34.065-15.891-18.456-10.587-31.63-21.326l-89.043 41.87q-14.391 6.695-29.066 1.782-14.674-4.913-22.369-19.304L78.869-333.609Q70.608-347 74.456-361.674q3.848-14.674 15.674-23.935l82.608-60.174q-1.434-7.304-1.934-17.108-.5-9.805-.5-17.109 0-7.304.5-17.109.5-9.804 1.934-17.108L90.13-574.956q-11.826-9.261-15.674-23.935-3.848-14.674 4.413-27.5l69.957-124.349q8.261-13.261 22.935-18.456 14.674-5.196 28.5 1.5l90.174 41.304q12.608-10.174 30.782-20.478 18.174-10.304 33.782-15.174l15.435-99.174q2-14.956 13.609-24.217t26.566-9.261h138.782q14.957 0 26.566 9.261 11.609 9.261 13.609 24.217l15.435 98.174q15.608 5.87 34.282 15.674 18.674 9.804 31.413 20.978l89.043-41.304q13.826-6.696 28.783-1.783t22.652 18.739l70.522 123.349q8.261 13.391 4.631 28.565-3.631 15.174-16.457 23.87l-83.174 58.739q1.435 8.304 2.218 18.108.782 9.805.782 18.109 0 8.304-.782 17.609-.783 9.304-2.218 17.608l83.174 59.174q11.826 9.261 15.674 23.935 3.848 14.674-3.848 28.065L810.609-209.26q-7.696 14.391-22.087 19.304-14.392 4.913-28.783-1.782l-89.609-41.87q-13.173 10.739-30.847 21.543-17.674 10.805-34.282 15.674l-15.435 97.043q-2 14.957-13.609 24.218t-26.566 9.261ZM478.87-350q54 0 92-38t38-92q0-54-38-92t-92-38q-54 0-92 38t-38 92q0 54 38 92t92 38Zm0-60q-29.566 0-49.783-20.5Q408.87-451 408.87-480t20.217-49.5Q449.304-550 478.87-550q29 0 49.5 20.5t20.5 49.5q0 29-20.5 49.5t-49.5 20.5Zm1.13-70Zm-39.478 334.913h78.391l14.565-111.435q33.565-8 63.913-25t54.348-42.696l106 46 34.913-64.652-92.87-67.869q4-17.565 6.783-34.631 2.783-17.065 2.783-34.63t-2.283-34.63q-2.283-17.066-7.283-34.631l93.435-67.869-35.478-64.652-105.435 46q-23-27.131-53.13-45.479-30.131-18.348-65.696-22.782l-14-110.87h-78.956l-13.435 110.87q-35.13 6.434-65.761 24.282-30.63 17.848-54.196 43.979l-104.869-46-35.478 64.652 92.304 67.304q-4 17.565-6.782 34.913-2.783 17.348-2.783 34.913 0 17.565 2.783 35.196 2.782 17.63 6.782 34.63l-92.304 67.304 35.478 64.652 104.869-46q24.566 25.131 55.196 42.696 30.631 17.565 64.761 25.565l13.435 110.87Z"/>
+          </svg>
+          &nbsp;
+          <span style="position: relative; top: -5px; margin-left: -5px; font-weight: 600;">
+            Settings
+          </span>
+        </p>
+      </div>
+      <div class="sheet reveal" id="add-s" style="height: auto !important;">
+        <div style="width: calc(100% - 30px); margin-top: 0px; height: 50px; display: inline-block;">
+          <h2 style="line-height: 50px; margin-top: 0px; font-weight: 700; text-align: left; float: left;">
+            Add to streak
+          </h2>
+          <div class="touch-action" id="add-s-c" style="width: 30px; height: 30px; border-radius: 30px; background: #2C2C2E; float: right; position: relative; top: 12px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #EBEBF560; width: 22px; position: relative; top: 4px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="M480-414 282-216q-14 14-33 14t-33-14q-14-14-14-33t14-33l198-198-198-198q-14-14-14-33t14-33q14-14 33-14t33 14l198 198 198-198q14-14 33-14t33 14q14 14 14 33t-14 33L546-480l198 198q14 14 14 33t-14 33q-14 14-33 14t-33-14L480-414Z"/>
+            </svg>
+          </div>
+          <div class="touch-action" id="share-t" style="width: 30px; height: 30px; border-radius: 30px; background: #2C2C2E; float: right; position: relative; top: 12px; right: 10px; overflow: hidden;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #EBEBF560; height: 19px; position: relative; top: 50%; transform: translateY(-50%); margin-top: -1px;">
+             <path xmlns="http://www.w3.org/2000/svg" d="M229-10q-39.05 0-66.525-27.769Q135-65.537 135-105v-458q0-38 27.475-66T229-657h96q19.75 0 33.375 13.675Q372-629.649 372-609.825 372-590 358.375-576.5 344.75-563 325-563h-96v458h502v-458h-97q-20.75 0-34.375-13.675Q586-590.351 586-610.175 586-630 599.625-643.5 613.25-657 634-657h97q39.463 0 67.231 28Q826-601 826-563v458q0 39.463-27.769 67.231Q770.463-10 731-10H229Zm203-759-55 55q-14 14-33.382 14.54-19.382.54-32.809-13.5Q297-727 297-746.5t14.276-33.776L445-916q14.364-14 34.182-14T513-916l135 136q14 14.25 14 33.283t-13.841 32.875Q634.696-700 615.382-700q-19.315 0-33.382-14l-56-55v401q0 19.75-13.675 33.375Q498.649-321 478.825-321 459-321 445.5-334.625 432-348.25 432-368v-401Z"/>
+            </svg>
+          </div>
+        </div>
+        <div style="width: calc(100% - 30px); margin-top: 10px; display: inline-block;">
+          <textarea placeholder="Today I laughed at..." id="textarea" maxlength="80" onkeyup="sharetext()"></textarea>
+          <input type="text" id="sharetext" style="display: none;">
+          <input type="text" id="sharepun" style="display: none;">
+          <button class="blbg touch-action" onclick="streak();emojisplosion();" style="width: 100%; float: none; margin-left: 0px; margin-bottom: 15px;" id="streak-s-c">
+                  <span style="position: relative; top: -3px; margin-left: 4px;">
+                    Add moment to streak
+                  </span>
+            &nbsp;
+                              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 48 48" style="width: 20px; fill: #000000; position: relative; top: 2px; margin-left: -4px; margin-right: 4px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="M13.3758 28.7221H9.50219C8.90307 28.7221 8.46407 28.4638 8.18517 27.9474C7.90627 27.4309 7.94243 26.9247 8.29363 26.4289L19.9454 9.63305C20.152 9.34383 20.4102 9.15273 20.7201 9.05976C21.03 8.9668 21.3399 8.98229 21.6498 9.10625C21.9596 9.20954 22.2076 9.41097 22.3935 9.71053C22.5794 10.0101 22.6517 10.3251 22.6104 10.6557L21.3399 20.758H26.2671C26.8868 20.758 27.3259 21.0369 27.5841 21.5947C27.8423 22.1525 27.7855 22.669 27.4137 23.1441L14.7083 38.4525C14.5017 38.7211 14.2383 38.8915 13.9181 38.9638C13.5979 39.0362 13.2828 39 12.9729 38.8554C12.6837 38.7314 12.4616 38.53 12.3067 38.2511C12.1517 37.9722 12.0949 37.6572 12.1362 37.306L13.3758 28.7221Z"/>
+   <path xmlns="http://www.w3.org/2000/svg" d="M31.8485 16.6733L34.9673 14.4455V36.5743C34.9673 37.2343 35.2066 37.8036 35.6851 38.2822C36.1637 38.7607 36.733 39 37.393 39C38.0531 39 38.6307 38.7607 39.1257 38.2822C39.6208 37.8036 39.8683 37.2343 39.8683 36.5743V11.1782C39.8683 10.5883 39.645 10.0778 39.1984 9.64663C38.7519 9.21555 38.2344 9 37.6461 9H36.0729C35.8214 9 35.5826 9.04125 35.3563 9.12376C35.13 9.20627 34.9343 9.29703 34.7693 9.39604L29.3732 13.3069C28.9046 13.6377 28.6307 14.067 28.5515 14.5947C28.4723 15.1223 28.5802 15.6054 28.8752 16.0439C29.2066 16.5845 29.6613 16.907 30.2391 17.0115C30.817 17.1161 31.3534 17.0033 31.8485 16.6733Z"/>
+            </svg>
+                </button>
+        </div>
+      </div>
+      <div class="overlay" id="overlay-2"></div>
+      <div class="sheet reveal" id="settings-s" style="background: #111111; box-shadow: 0px -2px 20px rgba(0 0 0 / 40%);">
+        <div class="s-h" id="s-s-h">
+          <div style="width: 40px; height: 5px; border-radius: 5px; background: #3C3C4360; position: relative; top: 8px;"></div>
+          <h4 style="line-height: 50px; margin-top: 0px; font-weight: 600;">
+            Settings
+          </h4>
+        </div>
+        <br>
+        <br>
+        <div style="width: calc(100% - 30px);">
+          <div style="width: 100px; position: relative; height: 100px;">
+            <img src="..." id="user-edit" style="width: 100%; height: 100%; border-radius: 12px;">
+              <div style="position: absolute; bottom: 0; margin: 0px auto; left:0; right:0;">
+                <input type="file" id="pic-up">
+                <label class="pic-up touch-action" for="pic-up" id="pic-up-l">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="width: 20px; position: relative; top: 5px;">
+                    <path xmlns="http://www.w3.org/2000/svg" d="M171-101q-32 7-54-15.5T101-171l41-197 226 226-197 41Zm197-41L142-368l472-472q28-28 66.5-28t65.5 28l94 94q28 27 28 65.5T840-614L368-142Zm312-630L254-346l92 92 426-426-92-92Z"/>
+                  </svg>
+                </label>
+            </div>
+          </div>
+          <br>
+          <div style="width: 80%; height: 60px; border: solid 1.4px #FFFFFF20; border-radius: 12px; margin-top: 10px; transition: linear 40ms;" id="i-cont">
+            <p style="float: left; font-size: 14px; color: #ABABAB; margin-left: 10px; margin-top: 10px;">
+              Your name
+            </p>
+            <div style="clear: both;"></div>
+            <input type="text" placeholder="Name" placeholder-es="Nombre" class="name-i" id="name-i-s" onblur="unfocus();setname()" style="margin-top: -12px; margin-left: 10px; width: calc(100% - 20px);">
+          </div>
+          <br>
+          <div class="s-i touch-action" id="appic-s-t">
+           <img src="https://cdn.laughnow.app/icons/app-icon-blue.png" style="float: left; width: 24px; height: 24px; border-radius: 6px; margin-left: 12px; position: relative; top: 22px;">
+          <div style="display: inline-block; float: left; margin-left: 12px;">
+            <p style=" margin-top: 12px; text-align: left; font-weight: 600; float: left;">
+              App icon
+            </p>
+            <div style="clear: both;"></div>
+            <p style="position: relative; top: -30px; text-align: left; color: #CCCCCC;">
+              Blue
+            </p>
+          </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #CCCCCC; float: right; width: 16px; margin-right: 12px; position: relative; top: 26px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="M567-482 264-785q-16-16-16.5-39.5T263-864q17-17 41-17t40 17l318 316q14 14 20.5 31t6.5 35q0 18-6.5 35T662-416L344-98q-17 17-40 16.5T264-99q-16-17-16.5-40t16.5-40l303-303Z"/>
+            </svg>
+          </div>
+          <br>
+          <div class="s-i touch-action" id="streak-s-i" style="margin-top: -10px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #FFFFFF; float: left; width: 24px; margin-left: 12px; position: relative; top: 22px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="m404-181 265-321H497l33-264-241 347h149l-34 238Zm-66-151H213q-28.872 0-42.436-25T174-406l376-542q10-14 25-18.5t30 1.5q15 5 24 19.67 9 14.67 7 30.33l-41 326h159q30.362 0 42.681 27Q809-535 791-512L381-18Q370.558-5.095 355.279-1.548 340 2 325-5.25q-14-6.25-21.5-19.625T298-55l40-277Zm140-140Z"/>
+            </svg>
+          <div style="display: inline-block; float: left; margin-left: 12px;">
+            <p style=" margin-top: 12px; text-align: left; font-weight: 600; float: left;">
+              View streak
+            </p>
+            <div style="clear: both;"></div>
+            <p style="position: relative; top: -30px; text-align: left; color: #CCCCCC;">
+              Streak and laughter attempts
+            </p>
+          </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #CCCCCC; float: right; width: 16px; margin-right: 12px; position: relative; top: 26px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="M567-482 264-785q-16-16-16.5-39.5T263-864q17-17 41-17t40 17l318 316q14 14 20.5 31t6.5 35q0 18-6.5 35T662-416L344-98q-17 17-40 16.5T264-99q-16-17-16.5-40t16.5-40l303-303Z"/>
+            </svg>
+          </div>
+          <br>
+          <div class="s-i touch-action" id="notif-s-t" style="margin-top: -10px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #FFFFFF; float: left; width: 24px; margin-left: 12px; position: relative; top: 22px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="M182-175q-19.75 0-33.375-13.675Q135-202.351 135-222.175 135-242 148.625-255.5 162.25-269 182-269h24v-279q0-92.693 53-168.347Q312-792 403-812v-16q0-32.5 22.458-55.25Q447.917-906 480-906t54.542 22.75Q557-860.5 557-828v16q91 19 144.5 95T755-548v279h23q19.625 0 33.812 13.675Q826-241.649 826-221.825 826-202 811.812-188.5 797.625-175 778-175H182Zm298-323Zm.5 452q-36.45 0-62.475-26.144Q392-98.287 392-135h177q0 37-26.231 63-26.232 26-62.269 26ZM300-269h360v-279q0-74-52.5-127T480-728q-75 0-127.5 53T300-548v279Z"/>
+            </svg>
+          <div style="display: inline-block; float: left; margin-left: 12px;">
+            <p style=" margin-top: 12px; text-align: left; font-weight: 600; float: left;">
+              Notifications
+            </p>
+            <div style="clear: both;"></div>
+            <p style="position: relative; top: -30px; text-align: left; color: #CCCCCC;">
+              Manage reminders
+            </p>
+          </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #CCCCCC; float: right; width: 16px; margin-right: 12px; position: relative; top: 26px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="M567-482 264-785q-16-16-16.5-39.5T263-864q17-17 41-17t40 17l318 316q14 14 20.5 31t6.5 35q0 18-6.5 35T662-416L344-98q-17 17-40 16.5T264-99q-16-17-16.5-40t16.5-40l303-303Z"/>
+            </svg>
+          </div>
+          <br>
+          <div class="s-i touch-action" id="share-i" style="margin-top: -10px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #FFFFFF; float: left; width: 24px; margin-left: 12px; position: relative; top: 22px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="M229-10q-39.05 0-66.525-27.769Q135-65.537 135-105v-458q0-38 27.475-66T229-657h96q19.75 0 33.375 13.675Q372-629.649 372-609.825 372-590 358.375-576.5 344.75-563 325-563h-96v458h502v-458h-97q-20.75 0-34.375-13.675Q586-590.351 586-610.175 586-630 599.625-643.5 613.25-657 634-657h97q39.463 0 67.231 28Q826-601 826-563v458q0 39.463-27.769 67.231Q770.463-10 731-10H229Zm203-759-55 55q-14 14-33.382 14.54-19.382.54-32.809-13.5Q297-727 297-746.5t14.276-33.776L445-916q14.364-14 34.182-14T513-916l135 136q14 14.25 14 33.283t-13.841 32.875Q634.696-700 615.382-700q-19.315 0-33.382-14l-56-55v401q0 19.75-13.675 33.375Q498.649-321 478.825-321 459-321 445.5-334.625 432-348.25 432-368v-401Z"/>
+            </svg>
+          <div style="display: inline-block; float: left; margin-left: 12px;">
+            <p style=" margin-top: 12px; text-align: left; font-weight: 600; float: left;">
+              Share LaughNow
+            </p>
+            <div style="clear: both;"></div>
+            <p style="position: relative; top: -30px; text-align: left; color: #CCCCCC;">
+              Share the app with friends
+            </p>
+          </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #CCCCCC; float: right; width: 16px; margin-right: 12px; position: relative; top: 26px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="M567-482 264-785q-16-16-16.5-39.5T263-864q17-17 41-17t40 17l318 316q14 14 20.5 31t6.5 35q0 18-6.5 35T662-416L344-98q-17 17-40 16.5T264-99q-16-17-16.5-40t16.5-40l303-303Z"/>
+            </svg>
+          </div>
+          <br>
+          <a href="https://laughnow.app/privacy" target="_blank">
+          <div class="s-i touch-action" style="margin-top: -10px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #FFFFFF; float: left; width: 24px; margin-left: 12px; position: relative; top: 22px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="M451-354h58q11.85 0 18.925-8.75Q535-371.5 533-382l-21-120q19.465-11.155 31.733-28.549Q556-547.944 556-570q0-32.05-21.965-54.025-21.964-21.975-54-21.975Q448-646 426-624.025T404-570q0 22.056 12.267 39.451 12.268 17.394 31.733 28.723L428-382q-3 10.625 4.034 19.312Q439.068-354 451-354Zm29 294q-8.32 0-15.88-1.5Q456.56-63 450-66q-144-47-229.5-177.597Q135-374.193 135-523.106V-712q0-30.257 16.375-55.162Q167.75-792.068 196-802l251-94q16-6 33-6t33 6l251 94q28.25 9.932 45.125 34.838Q826-742.257 826-712v188.894q0 148.913-86 279.509Q654-113 510-66q-6.56 3-14.12 4.5T480-60Zm0-91q110-43 180.5-144T731-522.706V-712l-251-95-251 95.484v188.345Q229-396 299.5-295 370-194 480-151Zm0-328Z"/>
+            </svg>
+          <div style="display: inline-block; float: left; margin-left: 12px;">
+            <p style=" margin-top: 12px; text-align: left; font-weight: 600; float: left;">
+              Privacy
+            </p>
+            <div style="clear: both;"></div>
+            <p style="position: relative; top: -30px; text-align: left; color: #CCCCCC;">
+              View policy
+            </p>
+          </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #CCCCCC; float: right; width: 16px; margin-right: 12px; position: relative; top: 26px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="M567-482 264-785q-16-16-16.5-39.5T263-864q17-17 41-17t40 17l318 316q14 14 20.5 31t6.5 35q0 18-6.5 35T662-416L344-98q-17 17-40 16.5T264-99q-16-17-16.5-40t16.5-40l303-303Z"/>
+            </svg>
+          </div>
+          </a>
+          <br>
+          <a href="https://laughnow.app/help" target="_blank">
+          <div class="s-i touch-action" style="margin-top: -10px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #FFFFFF; float: left; width: 24px; margin-left: 12px; position: relative; top: 22px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="M482.028-247Q500-247 514-261.028t14-32.641q0-18.613-14.028-31.972Q499.944-339 481.472-339T449.5-325.693q-13.5 13.308-13.5 32.58Q436-275 449.658-261t32.37 14Zm-1.624 192q-88.872 0-166.125-33.084-77.254-33.083-135.183-91.012-57.929-57.929-91.012-135.119Q55-391.406 55-480.362q0-88.957 33.084-166.285 33.083-77.328 90.855-134.809 57.772-57.482 135.036-91.013Q391.238-906 480.279-906q89.04 0 166.486 33.454 77.446 33.453 134.853 90.802 57.407 57.349 90.895 134.877Q906-569.34 906-480.266q0 89.01-33.531 166.247-33.531 77.237-91.013 134.86-57.481 57.623-134.831 90.891Q569.276-55 480.404-55Zm.096-94q137.5 0 234-96.372T811-480.5q0-137.5-96.312-234Q618.375-811 479.5-811q-137.5 0-234 96.312Q149-618.375 149-479.5q0 137.5 96.372 234T480.5-149Zm-.5-331Zm.794-164q24.141 0 42.674 15.429Q542-613.143 542-590.104q0 22.404-13.148 39.683Q515.705-533.143 499-520q-23 20-40.5 44.077Q441-451.846 441-423q0 13.545 10.5 21.773Q462-393 476-393q15 0 25.375-10T517-427q4-18 14.455-32.531 10.454-14.531 25.776-26.253Q581-505 596-533.115q15-28.115 15-58.255Q611-643 574.5-679q-36.5-36-86.612-36-39.314 0-73.601 16.5T356-651q-8 12-7.062 26.471.937 14.47 13.031 23.529 14.416 9 30.146 5.5Q407.846-599 418-612q10.75-13.903 27.295-22.952Q461.841-644 480.794-644Z"/>
+            </svg>
+          <div style="display: inline-block; float: left; margin-left: 12px;">
+            <p style=" margin-top: 12px; text-align: left; font-weight: 600; float: left;">
+              Help
+            </p>
+            <div style="clear: both;"></div>
+            <p style="position: relative; top: -30px; text-align: left; color: #CCCCCC;">
+              Get LaughNow help
+            </p>
+          </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #CCCCCC; float: right; width: 16px; margin-right: 12px; position: relative; top: 26px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="M567-482 264-785q-16-16-16.5-39.5T263-864q17-17 41-17t40 17l318 316q14 14 20.5 31t6.5 35q0 18-6.5 35T662-416L344-98q-17 17-40 16.5T264-99q-16-17-16.5-40t16.5-40l303-303Z"/>
+            </svg>
+          </div>
+          </a>
+          <br>
+          <a href="https://laughnow.app/report" target="_blank">
+          <div class="s-i touch-action" style="margin-top: -10px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #FFFFFF; float: left; width: 24px; margin-left: 12px; position: relative; top: 22px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="M221.825-95Q202-95 188.5-108.625 175-122.25 175-142v-636q0-19.75 13.625-33.875T222-826h304q16.5 0 29.25 11T571-787l12 47h195q19.75 0 33.875 14.125T826-692v326q0 19.75-14.125 33.375T778-319H561q-16.5 0-29.25-10T516-356l-12-48H269v262q0 19.75-13.675 33.375Q241.649-95 221.825-95ZM500-572Zm103 159h128v-232H503l-19-86H269v233h315l19 85Z"/>
+            </svg>
+          <div style="display: inline-block; float: left; margin-left: 12px;">
+            <p style=" margin-top: 12px; text-align: left; font-weight: 600; float: left;">
+              Report something
+            </p>
+            <div style="clear: both;"></div>
+            <p style="position: relative; top: -30px; text-align: left; color: #CCCCCC;">
+              Send a request
+            </p>
+          </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #CCCCCC; float: right; width: 16px; margin-right: 12px; position: relative; top: 26px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="M567-482 264-785q-16-16-16.5-39.5T263-864q17-17 41-17t40 17l318 316q14 14 20.5 31t6.5 35q0 18-6.5 35T662-416L344-98q-17 17-40 16.5T264-99q-16-17-16.5-40t16.5-40l303-303Z"/>
+            </svg>
+          </div>
+          </a>
+          <br>
+          <div class="s-i touch-action" id="danger-s-t" style="margin-top: -10px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #FF3535; float: left; width: 24px; margin-left: 12px; position: relative; top: 22px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="M253-95q-40.212 0-67.606-27.1Q158-149.2 158-189v-553h-11q-19.75 0-33.375-13.675Q100-769.351 100-789.175 100-809 113.625-822.5 127.25-836 147-836h184q0-20 13.625-34T378-884h203q19.75 0 33.375 14.188Q628-855.625 628-836h185q19.75 0 33.375 13.675Q860-808.649 860-788.825 860-769 846.375-755.5 832.75-742 813-742h-11v553q0 39.8-27.394 66.9Q747.213-95 707-95H253Zm454-647H253v553h454v-553ZM354-267h77v-399h-77v399Zm175 0h78v-399h-78v399ZM253-742v553-553Z"/>
+            </svg>
+          <div style="display: inline-block; float: left; margin-left: 12px;">
+            <p style=" margin-top: 12px; text-align: left; font-weight: 600; float: left; color: #FF3535;">
+              Danger zone
+            </p>
+            <div style="clear: both;"></div>
+            <p style="position: relative; top: -30px; text-align: left; color: #FF3535;">
+              Delete your data
+            </p>
+          </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #CCCCCC; float: right; width: 16px; margin-right: 12px; position: relative; top: 26px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="M567-482 264-785q-16-16-16.5-39.5T263-864q17-17 41-17t40 17l318 316q14 14 20.5 31t6.5 35q0 18-6.5 35T662-416L344-98q-17 17-40 16.5T264-99q-16-17-16.5-40t16.5-40l303-303Z"/>
+            </svg>
+          </div>
+          <br>
+          <h2 style="font-family: 'Figtree', system-ui;">
+              LaughNow
+          </h2>
+          <p style="margin-top: -20px; color: #CCCCCC;">
+              v1.0.2
+            </p>
+          <br>
+        </div>
+      </div>
+      <div class="sheet reveal" id="share-s" style="background: #111111; box-shadow: 0px -2px 20px rgba(0 0 0 / 40%); height: 85vh;">
+        <div class="s-h" id="share-s-h">
+          <div style="width: 40px; height: 5px; border-radius: 5px; background: #3C3C4360; position: relative; top: 8px;"></div>
+          <h4 style="line-height: 50px; margin-top: 0px; font-weight: 600;">
+            Share this
+          </h4>
+        </div>
+        <br>
+        <br>
+        <div style="width: calc(100% - 30px);">
+            <div style="width: 100%; padding-bottom: 100%; background: #000000; border-radius: 20px; overflow: hidden; position: relative;">
+              <div style="width: 80%; height: auto; background: #141414; border-radius: 12px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); overflow: hidden;">
+                <h2 id="shareprev" style="text-align: left; padding-left: 15px; padding-right: 15px; margin-top: 10px; margin-bottom: -20px; font-weight: 600;"></h2>
+                <br>
+                <h5 style="text-align: left; margin-left: 15px; margin-top: 10px; margin-bottom: 15px; font-weight: 500;">— Via LaughNow</h5>
+                <div style="float: left; position: relative; left: 15px; padding-bottom: 0px; margin-bottom: -2px; display: inline-block;">
+                  <img src="..." id="sh-pr-img" style="width: 20px; height: 20px; border-radius: 4px; display: inline-block;">
+                  &nbsp;
+                  <p style="color: #ABABAB; text-align: left; display: inline-block; position: relative; top: -2px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #ABABAB; width: 15px;">
+                      <path xmlns="http://www.w3.org/2000/svg" d="M479.504-261q59.752 0 109.624-28Q639-317 669-366.4q6-12.6-1.729-24.1-7.729-11.5-22.155-11.5H314.77q-14.844 0-22.307 11Q285-380 292-367.4q29 49.477 79 77.938Q421-261 479.504-261ZM347-571l26 25q7.636 9 21.318 9Q408-537 417-545.5q9-8.5 9-21.5t-9-22l-36-37q-14.2-14-33.6-14-19.4 0-33.4 14l-37 37q-9 9.091-8.5 22.045Q269-554 278-545q9 9 22 8.5t22-9.5l25-25Zm267.477 0L640-546q7.714 9 21 9t22-8.5q9-8.136 9-21.818Q692-581 683-590l-36-36q-14.2-14-33.6-14-19.4 0-33.4 14l-35 37q-9 8.714-9 21.5t9 21.5q8.636 9 21.818 9Q580-537 589-546l25.477-25ZM480.138-55Q392-55 314.5-88T179-179q-58-58-91-135.362t-33-165.5Q55-568 88-645.5t90.843-135.553q57.843-58.052 135.278-91.5Q391.557-906 479.779-906q88.221 0 165.839 33.37 77.619 33.37 135.596 91.29 57.978 57.92 91.382 135.46T906-480q0 88.276-33.447 165.76-33.448 77.483-91.5 135.362Q723-121 645.638-88t-165.5 33ZM480-480Zm0 331q138.375 0 234.688-96.312Q811-341.625 811-480t-96.312-234.688Q618.375-811 480-811t-234.688 96.312Q149-618.375 149-480t96.312 234.688Q341.625-149 480-149Z"/>
+                    </svg>
+                    &nbsp;
+                    <span style="font-size: 15px; position: relative; top: -2px; margin-left: -8px;" id="la-track-3">
+                    </span>
+                  </p>
+                  &nbsp;
+                  <p style="color: #ABABAB; text-align: left; display: inline-block; position: relative; top: -2px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #ABABAB; height: 14px;">
+                      <path xmlns="http://www.w3.org/2000/svg" d="m404-181 265-321H497l33-264-241 347h149l-34 238Zm-66-151H213q-28.872 0-42.436-25T174-406l376-542q10-14 25-18.5t30 1.5q15 5 24 19.67 9 14.67 7 30.33l-41 326h159q30.362 0 42.681 27Q809-535 791-512L381-18Q370.558-5.095 355.279-1.548 340 2 325-5.25q-14-6.25-21.5-19.625T298-55l40-277Zm140-140Z"/>
+                    </svg>
+                    &nbsp;
+                    <span style="font-size: 15px; position: relative; top: -2px; margin-left: -8px;" id="streak-track-4">0</span>
+                  </p>
+                </div>
+                <img src="https://cdn.laughnow.app/icons/laughnow-pride-ic.png" style="float: right; position: absolute; right: 15px; bottom: 16px; width: 20px; height: 20px;">
+              </div>
+            </div>
+            <br>
+            <div class="s-i touch-action" style="height: 50px; border-radius: 10px;" id="sharepun-btn">
+              <p style="line-height: 50px; margin-top: 0px; margin-left: 15px; text-align: left; font-weight: 600; float: left;">
+                Share
+              </p>
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #FFFFFF; width: 20px; float: right; margin-right: 12px; display: inline-block; position: relative; top: 13px;">
+                <path xmlns="http://www.w3.org/2000/svg" d="M229-10q-39.05 0-66.525-27.769Q135-65.537 135-105v-458q0-38 27.475-66T229-657h96q19.75 0 33.375 13.675Q372-629.649 372-609.825 372-590 358.375-576.5 344.75-563 325-563h-96v458h502v-458h-97q-20.75 0-34.375-13.675Q586-590.351 586-610.175 586-630 599.625-643.5 613.25-657 634-657h97q39.463 0 67.231 28Q826-601 826-563v458q0 39.463-27.769 67.231Q770.463-10 731-10H229Zm203-759-55 55q-14 14-33.382 14.54-19.382.54-32.809-13.5Q297-727 297-746.5t14.276-33.776L445-916q14.364-14 34.182-14T513-916l135 136q14 14.25 14 33.283t-13.841 32.875Q634.696-700 615.382-700q-19.315 0-33.382-14l-56-55v401q0 19.75-13.675 33.375Q498.649-321 478.825-321 459-321 445.5-334.625 432-348.25 432-368v-401Z"/>
+              </svg>
+            </div>
+            <br>
+            <p style="color: #CCCCCC; float: left; font-size: 14px; margin-top: -5px; text-align: left;">
+             Tip: take a screenshot of the graphic avobe to share as an image anywhere.
+            </p>
+        </div>
+      </div>
+      <div class="sheet slide" id="appic-s" style="background: #111111; box-shadow: 0px -2px 20px rgba(0 0 0 / 40%);">
+        <div class="s-h" style="border-bottom: none;">
+          <h4 style="width: 100%; line-height: 50px; margin-top: 0px; font-weight: 600; margin: 0; left: 0; right: 0;">
+            App icon
+          </h4>
+        </div>
+        <div class="touch-action" id="appic-s-c" style="width: 30px; height: 30px; border-radius: 30px; background: #2C2C2E; float: left; position: relative; top: -20px; left: 15px; z-index: 1000000;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #EBEBF560; width: 22px; position: relative; top: 4px; left: 4px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="m161-480 303 303q16 16 16.5 39.5T465-97q-17 17-41 17t-41-17L66-414q-14-14-20.5-31T39-480q0-18 6.5-35T66-546l318-318q17-17 40-16.5t40 16.5q16 17 16.5 40.5T464-783L161-480Z"/>
+            </svg>
+          </div>
+        <br>
+        <div style="width: calc(100% - 30px);">
+          <div class="s-i touch-action" style="height: 50px; border-radius: 10px 10px 0px 0px; border-bottom: solid 1px #FFFFFF10;">
+            <img src="https://cdn.laughnow.app/icons/app-icon-blue.png" style="float: left; width: 24px; height: 24px; border-radius: 6px; margin-left: 12px; position: relative; top: 14px;">
+            <p style="line-height: 50px; margin-top: 0px; margin-left: 10px; text-align: left; font-weight: 600; float: left;">
+              Blue
+            </p>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #FFFFFF; width: 24px; float: right; margin-right: 12px; display: inline-block; position: relative; top: 13px;">
+              <path d="m378-358 350-349q14.2-14 33.6-14 19.4 0 33.4 14.053 14 14.052 14 33.8Q809-653.4 795-639L412-256q-14.364 14-34.182 14T344-256L164-436q-14-14.467-14-34.233Q150-490 164.053-504q14.052-14 33.8-14Q217.6-518 232-504l146 146Z"/>
+            </svg>
+          </div>
+          <a href="https://laughnow.app/p" target="_blank">
+          <div class="s-i touch-action" style="height: 50px; border-radius: 0px; border-bottom: solid 1px #FFFFFF10;">
+            <img src="https://cdn.laughnow.app/icons/app-icon-pride.png" style="float: left; width: 24px; height: 24px; border-radius: 6px; margin-left: 12px; position: relative; top: 14px;">
+            <p style="line-height: 50px; margin-top: 0px; margin-left: 10px; text-align: left; font-weight: 600; float: left;">
+              Pride
+            </p>
+          </div>
+          </a>
+          <a href="https://laughnow.app/" target="_blank">
+            <div class="s-i touch-action" style="height: 50px; border-radius: 0px 0px 10px 10px">
+              <img src="https://cdn.laughnow.app/icons/app-icon.png" style="float: left; width: 24px; height: 24px; border-radius: 6px; margin-left: 12px; position: relative; top: 14px;">
+              <p style="line-height: 50px; margin-top: 0px; margin-left: 10px; text-align: left; font-weight: 600; float: left;">
+                Default
+              </p>
+            </div>
+            </a>
+            <br>
+            <p style="color: #CCCCCC; float: left; font-size: 14px; margin-top: -5px; text-align: left;">
+             <span>A new tab will open after selecting a new app icon. Tap the</span>
+             <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #CCCCCC; height: 14px; position: relative; top: 2px; margin-left: 0px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="M229-10q-39.05 0-66.525-27.769Q135-65.537 135-105v-458q0-38 27.475-66T229-657h96q19.75 0 33.375 13.675Q372-629.649 372-609.825 372-590 358.375-576.5 344.75-563 325-563h-96v458h502v-458h-97q-20.75 0-34.375-13.675Q586-590.351 586-610.175 586-630 599.625-643.5 613.25-657 634-657h97q39.463 0 67.231 28Q826-601 826-563v458q0 39.463-27.769 67.231Q770.463-10 731-10H229Zm203-759-55 55q-14 14-33.382 14.54-19.382.54-32.809-13.5Q297-727 297-746.5t14.276-33.776L445-916q14.364-14 34.182-14T513-916l135 136q14 14.25 14 33.283t-13.841 32.875Q634.696-700 615.382-700q-19.315 0-33.382-14l-56-55v401q0 19.75-13.675 33.375Q498.649-321 478.825-321 459-321 445.5-334.625 432-348.25 432-368v-401Z"/>
+             </svg>
+             <span>or</span>
+             <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #CCCCCC; height: 14px; position: relative; top: 2px; margin-left: 0px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="M480.5-114q-39.5 0-67.5-27.906T385-209q0-39.6 27.906-67.8Q440.812-305 480-305q40 0 67.5 28.075t27.5 67.5Q575-170 547.5-142t-67 28Zm0-271q-39.5 0-67.5-27.906T385-480q0-40 27.906-67.5T480-575q40 0 67.5 27.5t27.5 67q0 39.5-27.5 67.5t-67 28Zm0-270q-39.5 0-67.5-28.283t-28-68Q385-791 412.906-818.5T480-846q40 0 67.5 27.5t27.5 67.217q0 39.717-27.5 68T480.5-655Z"/>
+             </svg>
+             <span>icon to add LaughNow to your homescreen.</span>
+            </p>
+        </div>
+        <br>
+      </div>
+      <div class="sheet slide" id="danger-s" style="background: #111111; box-shadow: 0px -2px 20px rgba(0 0 0 / 40%);">
+        <div class="s-h" style="border-bottom: none;">
+          <h4 style="width: 100%; line-height: 50px; margin-top: 0px; font-weight: 600; margin: 0; left: 0; right: 0;">
+            Danger zone
+          </h4>
+        </div>
+        <div class="touch-action" id="danger-s-c" style="width: 30px; height: 30px; border-radius: 30px; background: #2C2C2E; float: left; position: relative; top: -20px; left: 15px; z-index: 1000000;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #EBEBF560; width: 22px; position: relative; top: 4px; left: 4px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="m161-480 303 303q16 16 16.5 39.5T465-97q-17 17-41 17t-41-17L66-414q-14-14-20.5-31T39-480q0-18 6.5-35T66-546l318-318q17-17 40-16.5t40 16.5q16 17 16.5 40.5T464-783L161-480Z"/>
+            </svg>
+          </div>
+        <br>
+        <div style="width: calc(100% - 30px);">
+          <div class="s-i touch-action" id="attcount-d" style="height: 50px;">
+            <p style="line-height: 50px; margin-top: 0px; margin-left: 15px; text-align: left; font-weight: 600; float: left; color: #FF3535;">
+              Delete laughter attempt count
+            </p>
+          </div>
+          <br>
+            <p style="color: #CCCCCC; float: left; font-size: 14px; margin-top: -5px; text-align: left;">
+             The count of laughter attempts since the app was installed or since the last deletion will be erased forever. This action is irreversible.
+            </p>
+          <br>
+          <div style="clear: both; height: 30px;"></div>
+          <div class="s-i touch-action" id="streakcount-d" style="height: 50px;">
+            <p style="line-height: 50px; margin-top: 0px; margin-left: 15px; text-align: left; font-weight: 600; float: left; color: #FF3535;">
+              Delete streak
+            </p>
+          </div>
+          <br>
+            <p style="color: #CCCCCC; float: left; font-size: 14px; margin-top: -5px; text-align: left;">
+             Your streak will be deleted forever. This action is irreversible.
+            </p>
+          <br>
+          <div style="clear: both; height: 30px;"></div>
+          <div class="s-i touch-action" id="data-d" style="height: 50px;">
+            <p style="line-height: 50px; margin-top: 0px; margin-left: 15px; text-align: left; font-weight: 600; float: left; color: #FF3535;">
+              Delete all data
+            </p>
+          </div>
+          <br>
+            <p style="color: #CCCCCC; float: left; font-size: 14px; margin-top: -5px; text-align: left;">
+             Your streak, laughter attempt count and profile information will be deleted forever. LaughNow will reset. This action is irreversible.
+            </p>
+          <br>
+          <p style="color: #CCCCCC; float: left; font-size: 14px; margin-top: px; text-align: left; padding-bottom: 15px;">
+             Be careful: erasing your browser history may result in the unexpected deletion of all your LaughNow data.
+            </p>
+        </div>
+        <br>
+      </div>
+      <div class="sheet slide" id="notif-s" style="background: #111111; box-shadow: 0px -2px 20px rgba(0 0 0 / 40%);">
+        <div class="s-h" style="border-bottom: none;">
+          <h4 style="width: 100%; line-height: 50px; margin-top: 0px; font-weight: 600; margin: 0; left: 0; right: 0;">
+            Notifications
+          </h4>
+        </div>
+        <div class="touch-action" id="notif-s-c" style="width: 30px; height: 30px; border-radius: 30px; background: #2C2C2E; float: left; position: relative; top: -20px; left: 15px; z-index: 1000000;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #EBEBF560; width: 22px; position: relative; top: 4px; left: 4px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="m161-480 303 303q16 16 16.5 39.5T465-97q-17 17-41 17t-41-17L66-414q-14-14-20.5-31T39-480q0-18 6.5-35T66-546l318-318q17-17 40-16.5t40 16.5q16 17 16.5 40.5T464-783L161-480Z"/>
+            </svg>
+          </div>
+        <br>
+        <div style="width: calc(100% - 30px);">
+          <div class="onesignal-customlink-container" style="height: 50px; border-radius: 10px; font-family: 'Figtree', !important;"></div>
+          <br>
+            <p style="color: #CCCCCC; float: left; font-size: 14px; margin-top: -5px; text-align: left;">
+             LaughNow notifications will be ocassionally sent as laughter reminders. You can turn reminders on or off anytime.
+            </p>
+        </div>
+        <br>
+      </div>
+      <div class="sheet slide" id="transfer-s" style="background: #111111; box-shadow: 0px -2px 20px rgba(0 0 0 / 40%);">
+        <div class="s-h" style="border-bottom: none;">
+          <h4 style="width: 100%; line-height: 50px; margin-top: 0px; font-weight: 600; margin: 0; left: 0; right: 0;">
+            Data transfer
+          </h4>
+        </div>
+        <div class="touch-action" id="transfer-s-c" style="width: 30px; height: 30px; border-radius: 30px; background: #2C2C2E; float: left; position: relative; top: -20px; left: 15px; z-index: 1000000;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #EBEBF560; width: 22px; position: relative; top: 4px; left: 4px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="m161-480 303 303q16 16 16.5 39.5T465-97q-17 17-41 17t-41-17L66-414q-14-14-20.5-31T39-480q0-18 6.5-35T66-546l318-318q17-17 40-16.5t40 16.5q16 17 16.5 40.5T464-783L161-480Z"/>
+            </svg>
+          </div>
+        <br>
+        <div style="width: calc(100% - 30px);">
+          <div class="s-i touch-action" style="height: 50px;">
+            <p style="line-height: 50px; margin-top: 0px; margin-left: 15px; text-align: left; font-weight: 600; float: left; color: #FFFFFF;">
+              Laughter attempt count
+            </p>
+            <input type="number" pattern="\d*" style="border: none; outline: none; background: #151515; float: right; position: relative; right: 7px; top: 7px; height: 30px; width: 100px; text-align: center; font-family: 'Figtree', system-ui; color: #FFFFFF; font-size: 14px; border-radius: 6px;" placeholder="0" onblur="localStorage.setItem('attcount', this.value);">
+          </div>
+          <br>
+            <p style="color: #CCCCCC; float: left; font-size: 14px; margin-top: -5px; text-align: left;">
+             Type the count of laughter attempts recorded on your old device.
+            </p>
+          <br>
+          <div style="clear: both; height: 30px;"></div>
+          <div class="s-i touch-action" id="streakcount-d" style="height: 50px;">
+            <p style="line-height: 50px; margin-top: 0px; margin-left: 15px; text-align: left; font-weight: 600; float: left; color: #FFFFFF;">
+              Laughter streak
+            </p>
+            <input type="number" pattern="\d*" style="border: none; outline: none; background: #151515; float: right; position: relative; right: 7px; top: 7px; height: 30px; width: 100px; text-align: center; font-family: 'Figtree', system-ui; color: #FFFFFF; font-size: 14px; border-radius: 6px;" placeholder="0" onblur="localStorage.setItem('laughstreak', this.value);">
+          </div>
+          <br>
+            <p style="color: #CCCCCC; float: left; font-size: 14px; margin-top: -5px; text-align: left;">
+             Type the laughter streak count recorded on your old device.
+            </p>
+            <br>
+            <p style="color: #CCCCCC; float: left; font-size: 14px; margin-top: -5px; text-align: left;">
+             For changes to make effect, you may need to close and reopen LaughNow.
+            </p>
+        </div>
+        <br>
+      </div>
+      <div class="onboarding" id="onboarding" style="overflow-y: scroll;">
+        <div id="o-1">
+          <h4>
+              Set up profile
+            </h4>
+          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; max-width: 400px;">
+          <div style="width: 120px; position: relative; height: 120px;">
+            <img src="..." id="user-o" style="width: 100%; height: 100%; border-radius: 14px;">
+              <div style="position: absolute; bottom: 0; margin: 0px auto; left:0; right:0;">
+                <input type="file" id="pic-up-o">
+                <label class="pic-up touch-action" for="pic-up-o" id="pic-up-l-o">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="width: 20px; position: relative; top: 5px;">
+                    <path xmlns="http://www.w3.org/2000/svg" d="M171-101q-32 7-54-15.5T101-171l41-197 226 226-197 41Zm197-41L142-368l472-472q28-28 66.5-28t65.5 28l94 94q28 27 28 65.5T840-614L368-142Zm312-630L254-346l92 92 426-426-92-92Z"/>
+                  </svg>
+                </label>
+            </div>
+          </div>
+          <br>
+          <div style="width: 80%; height: 60px; border: solid 1.4px #FFFFFF50; border-radius: 12px; margin-top: 10px; transition: linear 40ms;" id="i-cont-o">
+            <p style="float: left; font-size: 14px; color: #ABABAB; margin-left: 10px; margin-top: 10px;">
+              What's your name?
+            </p>
+            <div style="clear: both;"></div>
+            <input type="text" placeholder="Name" placeholder-es="Nombre" class="name-i" id="name-i-o" onblur="unfocus();setnO()" style="margin-top: -12px; margin-left: 10px; width: calc(100% - 20px);">
+          </div>
+        </div>
+          <div style="position: fixed; position: -webkit-fixed; bottom: 0px; width: 100%; height: 120px; background-color: #000000; margin: 0; left: 0; right: 0; border-top: solid 1px #ffffff50; height: auto;">
+    <center>
+        <button class="blbg" style="margin-top: 10px;" id="cont-o-1">
+          Continue
+      </button>
+      <br />
+        <p style="color: #ffffff90; margin-top: -10px; font-size: 13px;">
+          Your profile will be privately stored on this device
+          <br>
+          By using the app you agree to our
+          <a href="https://laughnow.app/terms" target="_blank" style="color: #fff; text-decoration: underline;">
+            terms
+          </a>
+      </p>
+    </center>
+</div>
+      </div>
+        <div id="o-2" style="display: none; overflow-y: scroll;">
+          <div style="width: calc(100% - 50px); max-width: 400px; overflow-y: scroll; margin-top: 60px;">
+            <h3 style="float: left;">
+              Hello, 
+              <span id="o-name">Name</span>
+            </h3>
+            <h1 style="float: left; text-align: left; font-size: 40px; margin-top: 0px;">
+              Welcome to LaughNow
+            </h1>
+            <br>
+            <div style="clear: both;"></div>
+            <div class="s-i" style="background: transparent; height: 90px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #FFFFFF; float: left; width: 24px; position: relative; top: 16px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="M479.504-261q59.752 0 109.624-28Q639-317 669-366.4q6-12.6-1.729-24.1-7.729-11.5-22.155-11.5H314.77q-14.844 0-22.307 11Q285-380 292-367.4q29 49.477 79 77.938Q421-261 479.504-261ZM347-571l26 25q7.636 9 21.318 9Q408-537 417-545.5q9-8.5 9-21.5t-9-22l-36-37q-14.2-14-33.6-14-19.4 0-33.4 14l-37 37q-9 9.091-8.5 22.045Q269-554 278-545q9 9 22 8.5t22-9.5l25-25Zm267.477 0L640-546q7.714 9 21 9t22-8.5q9-8.136 9-21.818Q692-581 683-590l-36-36q-14.2-14-33.6-14-19.4 0-33.4 14l-35 37q-9 8.714-9 21.5t9 21.5q8.636 9 21.818 9Q580-537 589-546l25.477-25ZM480.138-55Q392-55 314.5-88T179-179q-58-58-91-135.362t-33-165.5Q55-568 88-645.5t90.843-135.553q57.843-58.052 135.278-91.5Q391.557-906 479.779-906q88.221 0 165.839 33.37 77.619 33.37 135.596 91.29 57.978 57.92 91.382 135.46T906-480q0 88.276-33.447 165.76-33.448 77.483-91.5 135.362Q723-121 645.638-88t-165.5 33ZM480-480Zm0 331q138.375 0 234.688-96.312Q811-341.625 811-480t-96.312-234.688Q618.375-811 480-811t-234.688 96.312Q149-618.375 149-480t96.312 234.688Q341.625-149 480-149Z"/>
+            </svg>
+          <div style="display: inline-block; float: left; margin-left: 35px;">
+            <p style=" margin-top: -10px; text-align: left; font-weight: 600; float: left;">
+              Laugh
+            </p>
+            <div style="clear: both;"></div>
+            <p style="position: relative; top: -30px; text-align: left; color: #CCCCCC;">
+              Visit the Laugh tab for fun puns and jokes. Swipe down to load new puns.
+            </p>
+          </div>
+          </div>
+            <div class="s-i" style="background: transparent; height: 90px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #FFFFFF; float: left; width: 24px; position: relative; top: 18px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="m404-181 265-321H497l33-264-241 347h149l-34 238Zm-66-151H213q-28.872 0-42.436-25T174-406l376-542q10-14 25-18.5t30 1.5q15 5 24 19.67 9 14.67 7 30.33l-41 326h159q30.362 0 42.681 27Q809-535 791-512L381-18Q370.558-5.095 355.279-1.548 340 2 325-5.25q-14-6.25-21.5-19.625T298-55l40-277Zm140-140Z"/>
+            </svg>
+          <div style="display: inline-block; float: left; margin-left: 35px;">
+            <p style=" margin-top: -10px; text-align: left; font-weight: 600; float: left;">
+              Streak
+            </p>
+            <div style="clear: both;"></div>
+            <p style="position: relative; top: -30px; text-align: left; color: #CCCCCC;">
+              Keep track of your laughs and laughter attempts.
+            </p>
+          </div>
+          </div>
+            <div class="s-i" style="background: transparent; height: 90px;">
+            <img src="..." style="fill: #FFFFFF; float: left; width: 24px; height: 24px; border-radius: 6px; position: relative; top: 16px;" id="img-me">
+          <div style="display: inline-block; float: left; margin-left: 35px;">
+            <p style=" margin-top: -10px; text-align: left; font-weight: 600; float: left;">
+              Me
+            </p>
+            <div style="clear: both;"></div>
+            <p style="position: relative; top: -30px; text-align: left; color: #CCCCCC;">
+              Here's where you can edit your profile and access app settings
+            </p>
+          </div>
+          </div>
+            <button class="blbg reveal" style="margin-top: 10px; position: fixed; position: -webkit-fixed; bottom: 20px; margin: 0; left: 0; right: 0; margin-left: auto; margin-right: auto;" id="cont-o-2">
+          Skip
+      </button>
+          </div>
+        </div>
+        <div id="o-3" style="display: none; overflow-y: scroll;">
+          <image src="https://cdn.laughnow.app/mobile/notifications.png" style="width: 100%; object-fit: cover;">
+          <div style="width: calc(100% - 30px); position: fixed; position: -webkit-fixed; bottom: 120px; margin: 0; left: 0; right: 0; margin-left: auto; margin-right: auto;">
+            <h1>
+              Turn on notifications
+            </h1>
+            <p style="margin-top: -10px; color: #FFFFFF90;">
+              Never miss a fun joke and receive laughter reminders
+            </p>
+          </div>
+          <button class="blbg reveal" style="margin-top: 10px; position: fixed; position: -webkit-fixed; bottom: 20px; margin: 0; left: 0; right: 0; margin-left: auto; margin-right: auto;" id="cont-o-3">
+            Turn on
+        </button>
+        </div>
+      </div>
+    </center>
+    </div>
+    <div id="landing" style="overflow-y: scroll !important; width: 100%; height: 100vh; background: #000000; display: none;">
+      <center>
+      <div style="width: calc(100% - 100px); max-width: 800px; margin: 0; left: 0; right: 0; margin-left: auto; margin-right: auto; display: block;">
+      <div style="width: 100%; margin-top: 50px;">
+        <svg xmlns="http://www.w3.org/2000/svg"  viewbox="0 0 800 800" style="width: 65px;">
+<path d="M399.898 780.683C347.085 780.683 297.611 770.759 251.476 750.912C205.341 731.065 164.985 703.853 130.407 669.276C95.8299 634.698 68.6177 594.365 48.7706 548.279C28.9235 502.191 19 452.741 19 399.928C19 347.115 28.9539 297.569 48.8616 251.291C68.77 205.013 95.8909 164.73 130.224 130.44C164.557 96.1509 204.93 69.0053 251.344 49.0032C297.758 29.0011 347.171 19 399.582 19C425.908 19 451.347 21.7904 475.899 27.3711C500.451 32.9518 524.145 40.5898 546.979 50.2851V129.519C524.737 117.771 501.376 108.635 476.896 102.109C452.417 95.5827 426.757 92.3197 399.915 92.3197C314.23 92.3197 241.456 122.097 181.594 181.651C121.732 241.205 91.8005 313.843 91.8005 399.564C91.8005 485.286 121.755 558.102 181.664 618.014C241.573 677.926 314.273 707.882 399.764 707.882C485.255 707.882 557.894 677.991 617.682 618.209C677.469 558.427 707.363 485.724 707.363 400.101C707.363 380.613 705.632 361.55 702.169 342.912C698.706 324.274 693.512 306.458 686.586 289.463H763.063C768.417 307.326 772.692 325.317 775.888 343.437C779.085 361.557 780.683 380.445 780.683 400.101C780.683 452.512 770.682 501.925 750.68 548.339C730.677 594.752 703.532 635.126 669.242 669.458C634.953 703.792 594.693 730.913 548.463 750.821C502.233 770.728 452.711 780.683 399.898 780.683Z" fill="white"/>
+<path d="M399.526 609.978C437.344 609.978 472.107 601.25 503.815 583.792C535.523 566.334 561.029 542.13 580.333 511.181C584.194 503.354 583.775 495.809 579.076 488.549C574.376 481.289 567.514 477.659 558.49 477.659H241.423C232.13 477.659 225.217 481.199 220.685 488.277C216.152 495.355 215.998 502.808 220.222 510.636C239.163 541.613 264.511 565.914 296.265 583.54C328.02 601.166 362.44 609.978 399.526 609.978ZM271.631 307.823L297.146 332.793C302.06 338.304 308.429 341.06 316.254 341.06C324.079 341.06 330.747 338.395 336.259 333.066C341.771 327.736 344.526 321.308 344.526 313.782C344.526 306.256 341.771 299.738 336.259 294.226L298.993 256.415C291.366 248.805 282.333 245 271.892 245C261.45 245 252.424 248.805 244.814 256.415L207.003 294.226C201.491 299.669 198.827 306.17 199.009 313.73C199.19 321.291 202.037 327.826 207.549 333.338C213.06 338.85 219.579 341.515 227.105 341.333C234.631 341.151 241.149 338.304 246.661 332.793L271.631 307.823ZM529.605 307.823L554.86 332.793C559.824 338.304 566.161 341.06 573.87 341.06C581.58 341.06 588.099 338.395 593.426 333.066C598.938 327.97 601.694 321.51 601.694 313.685C601.694 305.86 598.938 299.192 593.426 293.68L556.161 256.415C548.535 248.805 539.501 245 529.059 245C518.618 245 509.592 248.805 501.982 256.415L465.263 294.226C459.751 299.554 456.995 305.981 456.995 313.509C456.995 321.037 459.751 327.465 465.263 332.793C470.54 338.304 477 341.06 484.643 341.06C492.286 341.06 498.863 338.304 504.374 332.793L529.605 307.823Z" fill="white"/>
+<path d="M658.643 149.204H629.801C626.295 149.204 623.723 147.678 622.083 144.625C620.444 141.573 620.665 138.592 622.749 135.685L700.807 23.0911C702.129 21.2532 703.781 20.0243 705.764 19.4045C707.746 18.7845 709.729 18.8773 711.711 19.6829C713.694 20.4067 715.274 21.708 716.451 23.5869C717.628 25.4656 718.072 27.4686 717.782 29.5961L709.068 98.7796H745.198C748.849 98.7796 751.438 100.419 752.964 103.698C754.49 106.978 754.139 110.03 751.911 112.856L666.564 215.499C665.243 217.192 663.554 218.276 661.499 218.751C659.444 219.227 657.457 219.021 655.537 218.133C653.699 217.327 652.269 216.026 651.246 214.229C650.224 212.432 649.857 210.429 650.146 208.22L658.643 149.204Z" fill="white"/>
+        </svg>
+        <div style="clear: both;"></div>
+        <h1 class="landing-h1" style="text-align: center; font-weight: 700; margin-top: 20px;">
+          The point is to make you laugh.
+        </h1>
+        <br>
+        <br>
+        <div style="width: 100%; overflow: hidden; height: 60vh; margin-top: 0px; position: relative; padding-bottom: 0px;">
+        <div class="land-cont">
+        <img class="img1 emergeleft" src="https://cdn.laughnow.app/mobile/img-1-min.png" style="animation-delay: 100ms; animation-duration: 1s;">
+          <img class="img3 emergeright" src="https://cdn.laughnow.app/mobile/img-3-min.png" style="animation-delay: 200ms; animation-duration: 1s;">
+        <img class="img2 emerge" src="https://cdn.laughnow.app/mobile/img-2-min.png" style="display: table-cell; margin-top: 0; animation-duration: 1s;">
+        </div>
+          <div style="width: 128px; height: 128px; background: #FFFFFF; border-radius: 14px; display: flex; flex-flow: column wrap; justify-content: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); box-shadow: 0px 0px 40px 80px rgba(0 0 0 / 50%)">
+          <center>
+          <img src="https://cdn.laughnow.app/codes/en.svg" style="width: 100px; margin-top: 4px;">
+          </center>
+        </div>
+        <div style="position: absolute; width: 100%; height: 60px; background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); bottom: 0px; left: 0; right: 0; margin-left: auto; margin-right: auto;">
+        <a class="footer-a" href="https://laughnow.app/privacy">
+          Privacy
+        </a>
+        &emsp;
+        <a class="footer-a" href="https://laughnow.app/terms">
+          Terms
+        </a>
+        &emsp;
+        <a class="footer-a" href="https://laughnow.app/help">
+          Help
+        </a>
+        &emsp;
+        <a class="footer-a" href="https://cdn.laughnow.app/press-kit.zip">
+          Press kit
+        </a>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="onboarding" id="ath-o">
+      <div>
+        <video src="https://cdn.laughnow.app/mobile/o_ath_ios.mp4" id="ath" style="width: 100%; object-fit: cover;" autoplay loop muted playsinline></video>
+        <div style="width: calc(100% - 30px); position: fixed; position: -webkit-fixed; bottom: 20px; margin: 0; left: 0; right: 0; margin-left: auto; margin-right: auto;">
+          <h1>
+            Add the app to your home screen
+          </h1>
+          <p style="margin-top: -10px; color: #FFFFFF90;">
+            Add to unlock the LaughNow experience
+          </p>
+        </div>
+    </div>
+    </div>
+      </center>
+    </div>
+    <script src="https://laughnow.app/script.js" defer></script>
+    <script id="laughscript" src="https://laughnow.app/laugh.js" defer></script>
+    <script async src="https://unpkg.com/emojisplosion/lib/global.js"></script>
+    <script>
+      function installcheck() {
+  if(window.navigator.standalone) {
+    document.querySelector("#ath-o").style.display = "none";
+    document.querySelector("#landing").style.display = "none";
+    document.querySelector("#app").style.display = "block";
+  }
+
+  if(window.matchMedia('(display-mode: standalone)').matches) {
+    document.querySelector("#ath-o").style.display = "none";
+    document.querySelector("#landing").style.display = "none";
+    document.querySelector("#app").style.display = "block";
+  }
+  
+  else {
+    document.querySelector("#ath-o").style.display = "block";
+    document.querySelector("#landing").style.display = "block";
+  }
+}
+      
+      window.addEventListener("load", run, true); function run(){
+        installcheck();
+        puns();
+        userp();
+        usern();
+        laat();
+        stat();
+	laughAttempts();
+};
+    </script>
+    <script>
+      var tran = new Translater();
+    if (tran.getLang() === "default") tran.setLang('en');
+    </script>
+    <script>
+  if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('sw.js')
+  }
+</script>
+    <script>
+      function myFunction(x) {
+  if (x.matches) {
+    document.querySelector("body").style.overflow = "hidden";
+  } else {
+    document.querySelector("body").style.overflow = "auto";
+  }
+}
+      
+var x = window.matchMedia("(max-width: 550px)")
+myFunction(x)
+x.addListener(myFunction)
+    </script>
+    <script>
+      const btnpun = document.querySelector("#sharepun-btn");
+      
+      btnpun.addEventListener('click', event => {
+        if (navigator.share) {
+          navigator.share({
+            title: document.getElementById("sharepun").value,
+            text: "“" + document.getElementById("sharepun").value + "”" + " — Via LaughNow",
+            url: document.location.href
+          }).then(() => {
+            console.log('');
+          })
+          .catch(console.error);
+        } else {
+        }
+      });
+          </script>
+  </body>
+</html>
