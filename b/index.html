@@ -6,11 +6,24 @@
     <link rel="icon" href="https://cdn.laughnow.app/icons/app-icon-blue.png" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>LaughNow</title>
-    <link rel="manifest" href="https://laughnow.app/p/manifest.json">
-    <link rel="stylesheet" href="https://laughnow.app/style.css" />
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/swiped-events/1.1.7/swiped-events.min.js" integrity="sha512-q2rGCiN6EL2X7aJwVzSD6E0GbpfcGSjipdpZ12lqArQfSMb/LTDXlSFZLrohrSanuRk2/oP96lb14NNgPCAZPw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta name="title" content="LaughNow">
+    <meta name="description" content="The point is to make you laugh">
+    <meta name="keywords" content="laugh now, laughnow, LaughNow, laughnow app, fun apps, fun">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta property="og:url" content="https://laughnow.app">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="LaughNow">
+    <meta property="og:description" content="The point is to make you laugh">
+    <meta property="og:image" content="https://cdn.laughnow.app/mobile/opengraph.png">
     <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -21,12 +34,11 @@
     <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
     <script>
       window.OneSignalDeferred = window.OneSignalDeferred || [];
-      OneSignalDeferred.push(function(OneSignal) {
-        OneSignal.init({
-          appId: "5c2bd805-6023-4adf-b8a3-f0e194806e42",
-          safari_web_id: "web.onesignal.auto.3fd215f3-eebf-45ec-a840-b342bc8d8df9",
-        });
-      });
+  OneSignalDeferred.push(function(OneSignal) {
+    OneSignal.init({
+      appId: "5c2bd805-6023-4adf-b8a3-f0e194806e42",
+    });
+  });
     </script>
   </head>
   <body>
@@ -47,8 +59,7 @@
         <div style="clear: both;"></div>
         <div class="t" id="laugh-t">
           <div style="width: calc(100% - 30px); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-            <p id="laugh-text"
-            style="font-size: 30px; font-weight: 500; max-width: calc(100% - 30px);">
+            <p id="laugh-text" style="font-size: 30px; font-weight: 500; max-width: calc(100% - 30px);">
         </p>
         </div>
           <button class="blbg touch-action" onclick="streak()" style="width: 70%; position: fixed; position: -webkit-fixed; bottom: 70px; margin: 0; left: 0; right: 0; margin-left: auto; margin-right: auto;" id="laugh-s-c">
@@ -369,6 +380,24 @@
           </div>
           </a>
           <br>
+          <div class="s-i touch-action" id="transfer-s-t" style="margin-top: -10px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #FFFFFF; float: left; width: 24px; margin-left: 12px; position: relative; top: 22px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="m245.913-268.282 70.261 70.26q13.674 13.674 13.174 31.946-.5 18.272-14.174 31.946-13.674 12.674-32.065 13.054-18.392.381-31.826-13.054L103.696-281.717Q96.978-288.435 94-296.63q-2.978-8.196-2.978-17.152 0-8.957 2.978-17.033t9.696-14.794l147.587-147.587q12.674-12.674 31.326-12.674t32.326 12.674q13.674 13.435 13.793 32.207.12 18.772-13.554 32.446l-69.261 69.26H802.63q19.153 0 32.327 13.174t13.174 32.327q0 19.152-13.174 32.326t-32.327 13.174H245.913Zm468.174-332.435H157.37q-19.153 0-32.327-13.174t-13.174-32.327q0-19.152 13.174-32.326t32.327-13.174h556.717l-70.261-70.26q-13.674-13.674-13.174-31.946.5-18.272 14.174-31.946 13.674-12.674 32.065-13.054 18.392-.381 31.826 13.054l147.587 147.587q6.718 6.718 9.696 14.913 2.978 8.196 2.978 17.152 0 8.957-2.978 17.033t-9.696 14.794L708.717-466.804q-12.674 12.674-31.326 12.674t-32.326-12.674q-13.674-13.435-13.793-32.207-.12-18.772 13.554-32.446l69.261-69.26Z"/>
+            </svg>
+          <div style="display: inline-block; float: left; margin-left: 12px;">
+            <p style=" margin-top: 12px; text-align: left; font-weight: 600; float: left;">
+              Data transfer
+            </p>
+            <div style="clear: both;"></div>
+            <p style="position: relative; top: -30px; text-align: left; color: #CCCCCC;">
+              Restore your LaughNow data 
+            </p>
+          </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #CCCCCC; float: right; width: 16px; margin-right: 12px; position: relative; top: 26px;">
+              <path xmlns="http://www.w3.org/2000/svg" d="M567-482 264-785q-16-16-16.5-39.5T263-864q17-17 41-17t40 17l318 316q14 14 20.5 31t6.5 35q0 18-6.5 35T662-416L344-98q-17 17-40 16.5T264-99q-16-17-16.5-40t16.5-40l303-303Z"/>
+            </svg>
+          </div>
+          <br>
           <div class="s-i touch-action" id="danger-s-t" style="margin-top: -10px;">
             <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" style="fill: #FF3535; float: left; width: 24px; margin-left: 12px; position: relative; top: 22px;">
               <path xmlns="http://www.w3.org/2000/svg" d="M253-95q-40.212 0-67.606-27.1Q158-149.2 158-189v-553h-11q-19.75 0-33.375-13.675Q100-769.351 100-789.175 100-809 113.625-822.5 127.25-836 147-836h184q0-20 13.625-34T378-884h203q19.75 0 33.375 14.188Q628-855.625 628-836h185q19.75 0 33.375 13.675Q860-808.649 860-788.825 860-769 846.375-755.5 832.75-742 813-742h-11v553q0 39.8-27.394 66.9Q747.213-95 707-95H253Zm454-647H253v553h454v-553ZM354-267h77v-399h-77v399Zm175 0h78v-399h-78v399ZM253-742v553-553Z"/>
@@ -431,7 +460,7 @@
                     <span style="font-size: 15px; position: relative; top: -2px; margin-left: -8px;" id="streak-track-4">0</span>
                   </p>
                 </div>
-                <img src="https://cdn.laughnow.app/icons/laughnow-pride-ic.png" style="float: right; position: absolute; right: 15px; bottom: 16px; width: 20px; height: 20px;">
+                <img src="https://cdn.laughnow.app/icons/laughnow-ic.png" style="float: right; position: absolute; right: 15px; bottom: 16px; width: 20px; height: 20px;">
               </div>
             </div>
             <br>
@@ -794,37 +823,34 @@ background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); botto
     </div>
       </center>
     </div>
-    <script src="https://laughnow.app/script.js" defer></script>
-    <script id="laughscript" src="https://laughnow.app/laugh.js" defer></script>
+    <script src="script.js" defer></script>
+    <script id="laughscript" src="laugh.js" defer></script>
     <script async src="https://unpkg.com/emojisplosion/lib/global.js"></script>
     <script>
       function installcheck() {
   if(window.navigator.standalone) {
-    document.querySelector("#ath-o").style.display = "none";
     document.querySelector("#landing").style.display = "none";
     document.querySelector("#app").style.display = "block";
   }
 
   if(window.matchMedia('(display-mode: standalone)').matches) {
-    document.querySelector("#ath-o").style.display = "none";
     document.querySelector("#landing").style.display = "none";
     document.querySelector("#app").style.display = "block";
   }
   
   else {
-    document.querySelector("#ath-o").style.display = "block";
     document.querySelector("#landing").style.display = "block";
   }
 }
       
-      window.addEventListener("load", run, true); function run(){
-        installcheck();
-        puns();
-        userp();
-        usern();
-        laat();
-        stat();
-	laughAttempts();
+window.addEventListener("load", run, true); function run(){
+  installcheck();
+  puns();
+  userp();
+  usern();
+  laat();
+  stat();
+  laughAttempts();
 };
     </script>
     <script>
@@ -845,7 +871,7 @@ background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); botto
   }
 }
       
-var x = window.matchMedia("(max-width: 550px)")
+var x = window.matchMedia("(max-width: 600px)")
 myFunction(x)
 x.addListener(myFunction)
     </script>
