@@ -1,0 +1,38 @@
+{
+    "background_color": "#000000",
+    "description": "The point is to make you laugh.",
+    "dir": "ltr",
+    "display": "standalone",
+    "name": "LaughNow",
+    "orientation": "portrait",
+    "scope": "/p",
+    "short_name": "LaughNow",
+    "start_url": "/p",
+    "theme_color": "#000000",
+    "categories": [
+      "entertainment",
+      "lifestyle",
+      "utilities"
+    ],
+    "screenshots": [],
+    "icons": [
+      {
+        "src": "https://cdn.laughnow.app/icons/app-icon-blue.png",
+        "type": "image/png",
+        "sizes": "1000x1000"
+      }
+    ],
+    "shortcuts": [
+      {
+        "name": "LaughNow",
+        "url": "/p",
+        "description": "LaughNow"
+      }
+    ],
+    "lang": "en",
+    "display_override": [
+      "standalone",
+      "window-controls-overlay"
+    ],
+    "prefer_related_applications": false
+  }
