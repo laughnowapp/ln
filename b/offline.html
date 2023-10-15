@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="https://cdn.laughnow.app/icons/app-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>LaughNow</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/swiped-events/1.1.7/swiped-events.min.js" integrity="sha512-q2rGCiN6EL2X7aJwVzSD6E0GbpfcGSjipdpZ12lqArQfSMb/LTDXlSFZLrohrSanuRk2/oP96lb14NNgPCAZPw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/translater.js/1.0.12/translater.min.js" integrity="sha512-lVd8Ov3O+4Ubc0HN0IKhjbP4nOg7MDoQORI2tpkWSdRr3440zt31uR+lgO9QNDGrBUjq/hcsMjQDVux/02142w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <style>
+    body {
+      background: #000000;
+      font-family: 'Figtree', system-ui;
+      color: #FFFFFF;
+    }
+    
+    .card-btn {
+  float: left;
+  margin-left: 22px;
+  margin-bottom: 22px;
+  margin-top: 0px;
+  border: none;
+  background: #FFFFFF;
+  color: #000000;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  font-family: 'Figtree', system-ui;
+  font-weight: 600;
+  white-space: nowrap;
+}
+  </style>
+  <body>
+    <center>
+      <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: calc(100% - 30px);">
+        <h2 style="font-family: 'Figtree', system-ui; text-align: center;">
+          No internet connection
+          <!--{ca}Sense connexió a Internet-->
+          <!--{da}Ingen internetforbindelse-->
+          <!--{de}Keine Internetverbindung-->
+          <!--{es}Sin conexión a Internet-->
+          <!--{fr}Pas de connexion Internet-->
+          <!--{it}Nessuna connessione internet-->
+          <!--{nl}Geen internet verbinding-->
+          <!--{nb}Ingen internettforbindelse-->
+          <!--{pt}Sem conexão com a internet-->
+          <!--{sv}Ingen internetanslutning-->
+        </h2>
+        <br>
+        <p style="font-family: 'Figtree', system-ui; margin-top: -30px; text-align: center;">
+          Make sure Wi-Fi is on and try again
+          <!--{ca}Assegura't que la Wi-Fi estigui activada i torna-ho a provar-->
+          <!--{da}Sørg for, at Wi-Fi er slået til, og prøv igen-->
+          <!--{de}Stellen Sie sicher, dass WLAN aktiviert ist, und versuchen Sie es erneut-->
+          <!--{es}Asegúrate de que Wi-Fi esté activado e inténtalo de nuevo-->
+          <!--{fr}Assurez-vous que le Wi-Fi est activé et réessayez-->
+          <!--{it}Assicurati che il Wi-Fi sia attivo e riprova-->
+          <!--{nl}Zorg ervoor dat wifi is ingeschakeld en probeer het opnieuw-->
+          <!--{nb}Sørg for at Wi-Fi er på, og prøv igjen-->
+          <!--{pt}Verifique se o Wi-Fi está ativado e tente novamente-->
+          <!--{sv}Se till att Wi-Fi är på och försök igen-->
+        </p>
+        <br>
+        <button class="card-btn touch-action" style="float: none; width: auto; margin: 0px;" onclick="window.location.reload();">
+          <span style="font-family: 'Figtree', system-ui; padding-left: 12px; padding-right: 12px; text-align: center;">
+            Try again
+            <!--{ca}Torna-ho a provar-->
+            <!--{da}Prøv igen-->
+            <!--{de}Versuch es noch einmal-->
+            <!--{es}Intentar de nuevo-->
+            <!--{fr}Essayer à nouveau-->
+            <!--{it}Riprova-->
+            <!--{nl}Probeer het nog eens-->
+            <!--{nb}Prøv igjen-->
+            <!--{pt}Tente novamente-->
+            <!--{sv}Försök igen-->
+          </span>
+        </button>
+      </div>
+    </center>
+  </body>
+</html>
