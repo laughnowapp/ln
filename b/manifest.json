@@ -5,9 +5,9 @@
     "display": "standalone",
     "name": "LaughNow",
     "orientation": "portrait",
-    "scope": "/p",
+    "scope": "/b",
     "short_name": "LaughNow",
-    "start_url": "/p",
+    "start_url": "/b",
     "theme_color": "#000000",
     "categories": [
       "entertainment",
@@ -25,7 +25,7 @@
     "shortcuts": [
       {
         "name": "LaughNow",
-        "url": "/p",
+        "url": "/b",
         "description": "LaughNow"
       }
     ],
