@@ -47,7 +47,7 @@ img {
   height: 50px;
   position: fixed;
   position: -webkit-fixed;
-  bottom: 0px;
+  bottom: 18px;
   background: #00000075;
   backdrop-filter: blur(22px); 
   -webkit-backdrop-filter: blur(22px);
