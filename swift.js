@@ -127,18 +127,6 @@ document.querySelector("#user-s-c").addEventListener("click", function () {
   document.querySelector("#overlay").style.display = "none";
 }); 
 
-document.querySelector("#appic-s-t").addEventListener("click", function () {
-  document.querySelector("#appic-s").style.display = "block";
-}); 
-
-document.getElementById("appic-s").addEventListener("swiped-right", function(e) {
-    document.querySelector("#appic-s").style.display = "none";
-});
-
-document.querySelector("#appic-s-c").addEventListener("click", function () {
-  document.querySelector("#appic-s").style.display = "none";
-});
-
 document.querySelector("#danger-s-t").addEventListener("click", function () {
   document.querySelector("#danger-s").style.display = "block";
 }); 
