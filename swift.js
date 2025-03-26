@@ -403,10 +403,6 @@ document.querySelector("#cont-o-1").addEventListener("click", function () {
   document.querySelector("#o-2").style.display = "block";
 }); 
 
-document.querySelector("#cont-o-2").addEventListener("click", function () {
-  document.querySelector("#o-2").style.display = "none";
-});
-
 document.querySelector("#o-3-skip").addEventListener("click", function () {
   document.querySelector("#o-2").style.display = "none";
   document.querySelector("#onboarding").style.display = "none";
