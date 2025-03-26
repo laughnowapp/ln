@@ -42,7 +42,7 @@
     </script>
   </head>
   <body>
-    <div id="app">
+    <div id="app" style="display: block !important;">
     <center>
       <div id="bod-cont">
         <nav class="topbar">
@@ -763,56 +763,6 @@
         </div>
       </div>
     </center>
-    </div>
-    <div id="landing" style="overflow-y: scroll !important; width: 100%; height: 100vh; background: #000000; display: none;">
-      <center>
-      <div style="width: calc(100% - 100px); max-width: 800px; margin: 0; left: 0; right: 0; margin-left: auto; margin-right: auto; display: block;">
-      <div style="width: 100%; margin-top: 50px;">
-        <svg xmlns="http://www.w3.org/2000/svg"  viewbox="0 0 800 800" style="width: 65px;">
-<path d="M399.898 780.683C347.085 780.683 297.611 770.759 251.476 750.912C205.341 731.065 164.985 703.853 130.407 669.276C95.8299 634.698 68.6177 594.365 48.7706 548.279C28.9235 502.191 19 452.741 19 399.928C19 347.115 28.9539 297.569 48.8616 251.291C68.77 205.013 95.8909 164.73 130.224 130.44C164.557 96.1509 204.93 69.0053 251.344 49.0032C297.758 29.0011 347.171 19 399.582 19C425.908 19 451.347 21.7904 475.899 27.3711C500.451 32.9518 524.145 40.5898 546.979 50.2851V129.519C524.737 117.771 501.376 108.635 476.896 102.109C452.417 95.5827 426.757 92.3197 399.915 92.3197C314.23 92.3197 241.456 122.097 181.594 181.651C121.732 241.205 91.8005 313.843 91.8005 399.564C91.8005 485.286 121.755 558.102 181.664 618.014C241.573 677.926 314.273 707.882 399.764 707.882C485.255 707.882 557.894 677.991 617.682 618.209C677.469 558.427 707.363 485.724 707.363 400.101C707.363 380.613 705.632 361.55 702.169 342.912C698.706 324.274 693.512 306.458 686.586 289.463H763.063C768.417 307.326 772.692 325.317 775.888 343.437C779.085 361.557 780.683 380.445 780.683 400.101C780.683 452.512 770.682 501.925 750.68 548.339C730.677 594.752 703.532 635.126 669.242 669.458C634.953 703.792 594.693 730.913 548.463 750.821C502.233 770.728 452.711 780.683 399.898 780.683Z" fill="white"/>
-<path d="M399.526 609.978C437.344 609.978 472.107 601.25 503.815 583.792C535.523 566.334 561.029 542.13 580.333 511.181C584.194 503.354 583.775 495.809 579.076 488.549C574.376 481.289 567.514 477.659 558.49 477.659H241.423C232.13 477.659 225.217 481.199 220.685 488.277C216.152 495.355 215.998 502.808 220.222 510.636C239.163 541.613 264.511 565.914 296.265 583.54C328.02 601.166 362.44 609.978 399.526 609.978ZM271.631 307.823L297.146 332.793C302.06 338.304 308.429 341.06 316.254 341.06C324.079 341.06 330.747 338.395 336.259 333.066C341.771 327.736 344.526 321.308 344.526 313.782C344.526 306.256 341.771 299.738 336.259 294.226L298.993 256.415C291.366 248.805 282.333 245 271.892 245C261.45 245 252.424 248.805 244.814 256.415L207.003 294.226C201.491 299.669 198.827 306.17 199.009 313.73C199.19 321.291 202.037 327.826 207.549 333.338C213.06 338.85 219.579 341.515 227.105 341.333C234.631 341.151 241.149 338.304 246.661 332.793L271.631 307.823ZM529.605 307.823L554.86 332.793C559.824 338.304 566.161 341.06 573.87 341.06C581.58 341.06 588.099 338.395 593.426 333.066C598.938 327.97 601.694 321.51 601.694 313.685C601.694 305.86 598.938 299.192 593.426 293.68L556.161 256.415C548.535 248.805 539.501 245 529.059 245C518.618 245 509.592 248.805 501.982 256.415L465.263 294.226C459.751 299.554 456.995 305.981 456.995 313.509C456.995 321.037 459.751 327.465 465.263 332.793C470.54 338.304 477 341.06 484.643 341.06C492.286 341.06 498.863 338.304 504.374 332.793L529.605 307.823Z" fill="white"/>
-<path d="M658.643 149.204H629.801C626.295 149.204 623.723 147.678 622.083 144.625C620.444 141.573 620.665 138.592 622.749 135.685L700.807 23.0911C702.129 21.2532 703.781 20.0243 705.764 19.4045C707.746 18.7845 709.729 18.8773 711.711 19.6829C713.694 20.4067 715.274 21.708 716.451 23.5869C717.628 25.4656 718.072 27.4686 717.782 29.5961L709.068 98.7796H745.198C748.849 98.7796 751.438 100.419 752.964 103.698C754.49 106.978 754.139 110.03 751.911 112.856L666.564 215.499C665.243 217.192 663.554 218.276 661.499 218.751C659.444 219.227 657.457 219.021 655.537 218.133C653.699 217.327 652.269 216.026 651.246 214.229C650.224 212.432 649.857 210.429 650.146 208.22L658.643 149.204Z" fill="white"/>
-        </svg>
-        <div style="clear: both;"></div>
-        <h1 class="landing-h1" style="text-align: center; font-weight: 700; margin-top: 20px;">
-          The point is to make you laugh.
-        </h1>
-        <br>
-        <br>
-        <div style="width: 100%; overflow: hidden; height: 60vh; margin-top: 0px; position: relative; padding-bottom: 0px;">
-        <div class="land-cont">
-        <img class="img1 emergeleft" src="https://cdn.laughnow.app/mobile/img-1-min.png" style="animation-delay: 100ms; animation-duration: 1s;">
-          <img class="img3 emergeright" src="https://cdn.laughnow.app/mobile/img-3-min.png" style="animation-delay: 200ms; animation-duration: 1s;">
-        <img class="img2 emerge" src="https://cdn.laughnow.app/mobile/img-2-min.png" style="display: table-cell; margin-top: 0; animation-duration: 1s;">
-        </div>
-          <div style="width: 128px; height: 128px; background: #FFFFFF; border-radius: 14px; display: flex; flex-flow: column wrap; justify-content: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); box-shadow: 0px 0px 40px 80px rgba(0 0 0 / 50%)">
-          <center>
-          <img src="https://cdn.laughnow.app/codes/en.svg" style="width: 100px; margin-top: 4px;">
-          </center>
-        </div>
-        <div style="position: absolute; width: 100%; height: 60px; background: rgb(0,0,0);
-background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); bottom: 0px; left: 0; right: 0; margin-left: auto; margin-right: auto;">
-        <a class="footer-a" href="https://laughnow.app/privacy">
-          Privacy
-        </a>
-        &emsp;
-        <a class="footer-a" href="https://laughnow.app/terms">
-          Terms
-        </a>
-        &emsp;
-        <a class="footer-a" href="https://laughnow.app/help">
-          Help
-        </a>
-        &emsp;
-        <a class="footer-a" href="https://cdn.laughnow.app/press-kit.zip">
-          Press kit
-        </a>
-        </div>
-        </div>
-      </div>
-    </div>
-    </div>
-      </center>
     </div>
     <script src="script.js" defer></script>
     <script id="laughscript" src="laugh.js" defer></script>
